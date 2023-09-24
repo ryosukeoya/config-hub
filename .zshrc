@@ -41,6 +41,7 @@ GIT_PS1_SHOWUPSTREAM=auto
 setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
 \$ '
 
+# Functions
 hello() {
   echo 'Hello World!'
 }
@@ -53,25 +54,19 @@ trick() {
   echo 'なぜベストを尽くさないのか'
 }
 
+# Aliases
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias -g g='git'
 alias -g ga='git add .'
-alias -g gplm='git pull origin main'
-alias -g gpsh='git push origin head'
 alias -g v='nvim'
 alias -g n='npm'
 alias -g nr='npm run'
 alias -g c='composer'
 alias -g cr='composer run-script'
 alias -g h='history'
-alias -g cdp='cd ~/documents/programming'
-alias -g cdpi='cd ~/documents/programming/individual_development'
-alias -g cdpp='cd ~/documents/programming/python'
-alias -g cdpj='cd ~/documents/programming/java'
 alias -g gm='gitmoji -c'
 alias -g rm='rm -iv'
 alias -g l='ls -l'
-alias -g cdphp='cd /Users/ryosuke/documents/programming/backend/php'
 alias -g ..='cd ..'
 alias -g ...='cd ../..'
 alias -g ....='cd ../../..'
@@ -79,3 +74,10 @@ alias -g ....='cd ../../..'
 alias -g L=' | wc -l'
 alias -g G=' | grep'
 alias -g C=' | pbcopy'
+
+# Directory hash
+hash -d p=/Users/ryosuke/Documents/programming
+hash -d pp=/Users/ryosuke/Documents/programming/python
+hash -d pi=/Users/ryosuke/Documents/programming/individual_development
+hash -d pj=/Users/ryosuke/Documents/programming/java
+hash -d pbp=/Users/ryosuke/Documents/programming/backend/php
