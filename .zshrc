@@ -1,10 +1,11 @@
-# phpbrew source $HOME/.phpbrew/bashrc
-
 # phpenv
 eval "$(phpenv init -)"
 
+# pyenv
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Prompt
 PROMPT="%n@%m %/$ "
 function powerline_precmd() {
     PS1="$(powerline-shell --shell zsh $?)"
@@ -38,8 +39,19 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 # プロンプトの表示設定(好きなようにカスタマイズ可)
-setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
-\$ '
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f \$ '
+
+# History
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=2000
+export SAVEHIST=100000
+
+# History beginning search
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
 
 # Functions
 hello() {
@@ -67,6 +79,7 @@ alias -g h='history'
 alias -g gm='gitmoji -c'
 alias -g rm='rm -iv'
 alias -g l='ls -l'
+
 alias -g ..='cd ..'
 alias -g ...='cd ../..'
 alias -g ....='cd ../../..'
