@@ -2,18 +2,18 @@
   "commands": [
     {
       "match": ".scss",
-      "isAsync": true,
+      "isasync": true,
       "cmd": "npm run lint:s"
     }
   ],
-  "workbench.colorCustomizations": {
-    // "editorCursor.foreground": "#15ff00",
-    // "terminalCursor.foreground": "#22a3ff"
+  "workbench.colorcustomizations": {
+    // "editorcursor.foreground": "#15ff00",
+    // "terminalcursor.foreground": "#22a3ff"
   },
-  // [PHP]
+  // <--------------------------------- PHP --------------------------------->
   "[php]": {
-    // "editor.defaultFormatter": "junstyle.php-cs-fixer"
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultformatter": "esbenp.prettier-vscode"
+    // "editor.defaultformatter": "junstyle.php-cs-fixer"
   },
   "emeraldwalk.runonsave": {
     "commands": [
@@ -23,51 +23,68 @@
       }
     ]
   },
-  // [Blade]
-  "blade.format.enable": true,
+  // PHP CS Fixer
+  "php-cs-fixer.executablepath": "${extensionpath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastdownload": 1699252189212,
+  // Blade
   "[blade]": {
-    "editor.defaultFormatter": "onecentlin.laravel-blade",
-    "editor.formatOnSave": true
+    "editor.defaultformatter": "onecentlin.laravel-blade",
+    "editor.formatonsave": true
   },
-  // [PHP CS Fixer]
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  // [Vim]
-  "vscode-neovim.neovimInitVimPaths.darwin": "/Users/ryosuke/.config/nvim/init.vim",
-  "vim.useSystemClipboard": true, // OS のクリップボードと同期
-  "vim.enableNeovim": true,
-  "vim.neovimPath": "/usr/local/bin/nvim",
-  // [Prettier]
-  "prettier.singleQuote": true,
-  // [Formatter]
-  "editor.autoClosingBrackets": "always",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "security.workspace.trust.untrustedFiles": "newWindow",
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "prettier.jsxSingleQuote": true,
+  "blade.format.enable": true,
+  // <--------------------------------- Python --------------------------------->
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
-    "editor.formatOnType": true
+    "editor.defaultformatter": "ms-python.black-formatter",
+    "editor.formatonsave": true,
+    "editor.formatontype": true
   },
+  // <--------------------------------- Ruby --------------------------------->
   "[ruby]": {
-    "editor.defaultFormatter": "svipas.prettier-plus"
+    "editor.defaultformatter": "svipas.prettier-plus"
   },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
+  // <--------------------------------- Java --------------------------------->
   "[java]": {
-    "editor.defaultFormatter": "redhat.java"
+    "editor.defaultformatter": "redhat.java"
   },
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  //Live-sass-compiler
+  // <--------------------------------- Vim --------------------------------->
+  "vscode-neovim.neoviminitvimpaths.darwin": "/users/ryosuke/.config/nvim/init.vim",
+  "vim.usesystemclipboard": true, // os のクリップボードと同期
+  "vim.enableneovim": true,
+  "vim.neovimpath": "/usr/local/bin/nvim",
+  // prettier
+  "prettier.singlequote": true,
+  // formatter
+  "editor.autoclosingbrackets": "always",
+  "editor.defaultformatter": "esbenp.prettier-vscode",
+  "editor.formatonpaste": true,
+  "security.workspace.trust.untrustedfiles": "newwindow",
+  "javascript.preferences.quotestyle": "single",
+  "typescript.preferences.quotestyle": "single",
+  "prettier.jsxsinglequote": true,
+  "[prisma]": {
+    "editor.defaultformatter": "prisma.prisma"
+  },
+  "[shellscript]": {
+    "editor.defaultformatter": "foxundermoon.shell-format"
+  },
+  "[dockerfile]": {
+    "editor.defaultformatter": "ms-azuretools.vscode-docker"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.markdownlint": true
+    },
+    "editor.formatOnPaste": true
+  },
+  // Live Sass Compiler
   "security.workspace.trust.enabled": false,
-  "liveSassCompile.settings.formats": [
+  "livesasscompile.settings.formats": [
     {
       "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "/sol/contents/it/lp/engineer_001/css"
+      "extensionname": ".css",
+      "savepath": "/sol/contents/it/lp/engineer_001/css"
     }
   ],
   "easysass.formats": [
@@ -80,13 +97,6 @@
       "extension": ".min.css"
     }
   ],
-  "[markdown]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": true
-    },
-    "editor.formatOnPaste": true
-  },
   "explorer.confirmDragAndDrop": false,
   "markdown-preview-enhanced.previewTheme": "github-light.css",
   "workbench.colorTheme": "Material Theme Ocean",
@@ -214,11 +224,4 @@
       ]
     }
   },
-  "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "php-cs-fixer.lastDownload": 1699252189212,
-  "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-  }
 }
