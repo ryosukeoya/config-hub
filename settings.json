@@ -47,7 +47,8 @@
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
   "[python]": {
-    "editor.defaultFormatter": null,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
     "editor.formatOnType": true
   },
   "[ruby]": {
@@ -56,6 +57,10 @@
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
   },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   //Live-sass-compiler
   "security.workspace.trust.enabled": false,
   "liveSassCompile.settings.formats": [
@@ -212,7 +217,7 @@
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "php-cs-fixer.lastDownload": 1693588183094,
+  "php-cs-fixer.lastDownload": 1699252189212,
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   }
