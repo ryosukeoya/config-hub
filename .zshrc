@@ -53,6 +53,12 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+# bindkey
+bindkey '^p^u' push-line
+
 # Functions
 hello() {
   echo 'Hello World!'
@@ -94,3 +100,7 @@ hash -d pp=/Users/ryosuke/Documents/programming/python
 hash -d pi=/Users/ryosuke/Documents/programming/individual_development
 hash -d pj=/Users/ryosuke/Documents/programming/java
 hash -d pbp=/Users/ryosuke/Documents/programming/backend/php
+hash -d m=/Applications/MAMP
+hash -d cs=/Users/ryosuke/Documents/programming/backend/csharp
+
+export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
