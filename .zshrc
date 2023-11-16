@@ -102,5 +102,6 @@ hash -d pj=/Users/ryosuke/Documents/programming/java
 hash -d pbp=/Users/ryosuke/Documents/programming/backend/php
 hash -d m=/Applications/MAMP
 hash -d cs=/Users/ryosuke/Documents/programming/backend/csharp
+hash -d g=/Users/ryosuke/Documents/programming/backend/go
 
 export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
