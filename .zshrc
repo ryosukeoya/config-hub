@@ -55,6 +55,7 @@ bindkey "^n" history-beginning-search-forward-end
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
 
 # bindkey
 bindkey '^p^u' push-line
@@ -104,4 +105,6 @@ hash -d g=/Users/ryosuke/Documents/programming/backend/go
 hash -d j=/Users/ryosuke/Documents/programming/java
 hash -d m=/Applications/MAMP
 
-export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
