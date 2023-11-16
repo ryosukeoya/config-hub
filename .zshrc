@@ -96,12 +96,12 @@ alias -g C=' | pbcopy'
 
 # Directory hash
 hash -d p=/Users/ryosuke/Documents/programming
-hash -d pp=/Users/ryosuke/Documents/programming/python
-hash -d pi=/Users/ryosuke/Documents/programming/individual_development
-hash -d pj=/Users/ryosuke/Documents/programming/java
-hash -d pbp=/Users/ryosuke/Documents/programming/backend/php
-hash -d m=/Applications/MAMP
+hash -d i=/Users/ryosuke/Documents/programming/individual_development
+hash -d ph=/Users/ryosuke/Documents/programming/backend/php
+hash -d py=/Users/ryosuke/Documents/programming/backend/python
 hash -d cs=/Users/ryosuke/Documents/programming/backend/csharp
 hash -d g=/Users/ryosuke/Documents/programming/backend/go
+hash -d j=/Users/ryosuke/Documents/programming/java
+hash -d m=/Applications/MAMP
 
 export PATH="/usr/local/opt/mysql@8.0/bin:$PATH"
