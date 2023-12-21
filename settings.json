@@ -74,7 +74,7 @@
   "[markdown]": {
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": true
+      "source.fixAll.markdownlint": "explicit"
     },
     "editor.formatOnPaste": true
   },
@@ -105,12 +105,16 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "markdown-preview-github-styles.colorTheme": "light",
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*"
+  ],
   "editor.quickSuggestions": {
     "strings": true
   },
   "workbench.iconTheme": "material-icon-theme",
-  "css.customData": ["./.vscode/custom.css-data.json"],
+  "css.customData": [
+    "./.vscode/custom.css-data.json"
+  ],
   "ruby.intellisense": "rubyLocate",
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.fileListLayout": "flat",
@@ -127,7 +131,9 @@
   "editor.formatOnSave": true,
   "files.autoSave": "afterDelay",
   "markdown-mermaid.darkModeTheme": "base",
-  "trailing-spaces.syntaxIgnore": ["markdown"],
+  "trailing-spaces.syntaxIgnore": [
+    "markdown"
+  ],
   "githubIssues.queries": [
     {
       "label": "My Issues",
@@ -149,19 +155,40 @@
     //   "decorations": [{ "color": "#b7573d" }]
     // },
     "((ASK_TO:))": {
-      "decorations": [{ "color": "#a1dc3b" }]
+      "decorations": [
+        {
+          "color": "#a1dc3b"
+        }
+      ]
     },
     "((TODO:))": {
-      "decorations": [{ "color": "#fff41a" }]
+      "decorations": [
+        {
+          "color": "#fff41a"
+        }
+      ]
     },
     "((MUST:))": {
-      "decorations": [{ "color": "#ff5900" }]
+      "decorations": [
+        {
+          "color": "#ff5900"
+        }
+      ]
     },
     "((ATTENTION:))": {
-      "decorations": [{ "color": "#ff0000" }]
+      "decorations": [
+        {
+          "color": "#ff0000"
+        }
+      ]
     },
     "((FIXME:))": {
-      "decorations": [{ "color": "#fff2f2", "backgroundColor": "#ff0000" }]
+      "decorations": [
+        {
+          "color": "#fff2f2",
+          "backgroundColor": "#ff0000"
+        }
+      ]
     },
     "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "filterFileRegex": ".*(?<!CHANGELOG.md)$",
