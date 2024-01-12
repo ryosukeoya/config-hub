@@ -3,3 +3,5 @@
 	name = Ryosuke Oya
 [init]
 	defaultBranch = main
+[core]
+	editor = nvim
