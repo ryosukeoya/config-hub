@@ -1,4 +1,4 @@
-# Prompt
+﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %C %%f%k%b > "
 
 # History
@@ -46,6 +46,7 @@ hash -d g=/mnt/c/source/go
 hash -d a=/mnt/c/source/azure
 hash -d sh=/mnt/c/source/shell
 hash -d d=/mnt/c/source/docker
+hash -d b=/mnt/c/source/baleen-studio
 
 # go
 export GOROOT=/usr/local/go
