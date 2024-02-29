@@ -47,11 +47,17 @@
     "editor.defaultformatter": "redhat.java"
   },
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  // <--------------------------------- Vim --------------------------------->
-  "vscode-neovim.neoviminitvimpaths.darwin": "/users/ryosuke/.config/nvim/init.vim",
+  // <--------------------------------- Neovim --------------------------------->
+  // "vscode-neovim.neoviminitvimpaths.darwin": "/users/ryosuke/.config/nvim/init.vim",
   "vim.usesystemclipboard": true, // os のクリップボードと同期
   "vim.enableneovim": true,
-  "vim.neovimpath": "/usr/local/bin/nvim",
+  // "vim.neovimpath": "/usr/local/bin/nvim",
+  // <--------------------------------- Vim --------------------------------->
+  // "vim.vimrc.enable": true,
+  // <--------------------------------- VSCode Neovim --------------------------------->
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimInitVimPaths.linux": "/root/.config/nvim/init.vim",
   // prettier
   "prettier.singlequote": true,
   // formatter
@@ -149,6 +155,12 @@
     }
   ],
   "phpstan.timeout": 20000,
+  "cSpell.ignoreWords": [
+    "ryosuke",
+    "neovim",
+    "nvim",
+    "protoc"
+  ],
   // [Hightlight]
   "highlight.regexes": {
     // "((【 ATTENTION 】))": {
@@ -251,4 +263,5 @@
       ]
     }
   },
+  "terminal.integrated.sendKeybindingsToShell": true,
 }
