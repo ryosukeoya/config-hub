@@ -1,5 +1,5 @@
 ﻿# Prompt
-PROMPT="%B%K{236}%F{252}%n@%m %C %%f%k%b > "
+PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
 
 # History
 export HISTFILE=${HOME}/.zsh_history
@@ -10,8 +10,8 @@ export SAVEHIST=1000
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey "^p" history-beginning-search-backward-end
-bindkey "^n" history-beginning-search-forward-end
+bindkey '^p' history-beginning-search-backward-end
+bindkey '^n' history-beginning-search-forward-end
 
 # Aliases
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
@@ -53,6 +53,8 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/source/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+export PATH=$HOME/.local/bin:$PATH
+
 # direnv
 eval "$(direnv hook bash)"
 
@@ -64,3 +66,4 @@ eval "$(direnv hook bash)"
 
 # Editor
 export EDITOR=nvim
+
