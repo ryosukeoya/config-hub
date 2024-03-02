@@ -6,6 +6,9 @@ export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=200
 export SAVEHIST=1000
 
+# bindkey
+bindkey -e
+
 # History beginning search
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
@@ -58,12 +61,14 @@ export PATH=$HOME/.local/bin:$PATH
 # direnv
 eval "$(direnv hook bash)"
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # dotnet
 
 # pyenv
-
-# bindkey
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Editor
 export EDITOR=nvim
-
