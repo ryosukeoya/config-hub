@@ -1,4 +1,4 @@
-﻿# Prompt
+# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
 
 # History
@@ -72,3 +72,15 @@ eval "$(pyenv init -)"
 
 # Editor
 export EDITOR=nvim
+
+# Functions
+
+function today() {
+  filename="$(date "+%F")"
+  [ -n "$1" ] && filename+="-$1"
+
+  ex='md'
+  [ -n "$2" ] && ex="$2"
+
+  touch "${filename}.${ex}"
+}
