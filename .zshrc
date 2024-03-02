@@ -22,6 +22,7 @@ alias g='git'
 alias ga='git add .'
 alias v='nvim'
 alias n='npm'
+alias s='source'
 alias nr='npm run'
 alias c='composer'
 alias cr='composer run-script'
@@ -30,17 +31,16 @@ alias l='ls -l'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
+alias re='exec $SHELL -l'
 
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 alias -g W=' | wc -l'
 alias -g G=' | grep'
 alias -g L=' | less'
-alias -g s='source'
-alias -g re='exec $SHELL -l'
+alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory hash
 hash -d c=/mnt/c
