@@ -1,4 +1,4 @@
-# Prompt
+﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
 
 # History
@@ -18,22 +18,22 @@ bindkey '^n' history-beginning-search-forward-end
 
 # Aliases
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-alias -g g='git'
-alias -g ga='git add .'
-alias -g v='nvim'
-alias -g n='npm'
-alias -g nr='npm run'
-alias -g c='composer'
-alias -g cr='composer run-script'
-alias -g gm='gitmoji -c'
-alias -g l='ls -l'
-alias -g prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
-alias -g h='history 0 | tail -n 40'
-alias -g x='xsel --clipboard --input'
+alias g='git'
+alias ga='git add .'
+alias v='nvim'
+alias n='npm'
+alias nr='npm run'
+alias c='composer'
+alias cr='composer run-script'
+alias gm='gitmoji -c'
+alias l='ls -l'
+alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
+alias h='history 0 | tail -n 40'
+alias x='xsel --clipboard --input'
 
-alias -g ..='cd ..'
-alias -g ...='cd ../..'
-alias -g ....='cd ../../..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 alias -g W=' | wc -l'
