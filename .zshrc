@@ -6,7 +6,7 @@ export HISTFILE=${HOME}/.zsh_history
 export HISTSIZE=200
 export SAVEHIST=1000
 
-# bindkey
+# Bindkey
 bindkey -e
 
 # History beginning search
@@ -27,6 +27,7 @@ alias -g c='composer'
 alias -g cr='composer run-script'
 alias -g gm='gitmoji -c'
 alias -g l='ls -l'
+alias -g prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias -g h='history 0 | tail -n 40'
 alias -g x='xsel --clipboard --input'
 
@@ -44,6 +45,7 @@ alias -g re='exec $SHELL -l'
 # Directory hash
 hash -d c=/mnt/c
 hash -d n=/mnt/c/note
+hash -d nb=/mnt/c/note-backup
 hash -d s=/mnt/c/source
 hash -d g=/mnt/c/source/go
 hash -d a=/mnt/c/source/azure
@@ -51,21 +53,18 @@ hash -d sh=/mnt/c/source/shell
 hash -d d=/mnt/c/source/docker
 hash -d b=/mnt/c/source/baleen-studio
 
-# go
+# Go
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/source/go
+export PATH=$HOME/.local/bin:$PATH
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-export PATH=$HOME/.local/bin:$PATH
-
-# direnv
+# Direnv
 eval "$(direnv hook bash)"
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
-# dotnet
-
-# pyenv
+# Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -74,7 +73,6 @@ eval "$(pyenv init -)"
 export EDITOR=nvim
 
 # Functions
-
 function today() {
   filename="$(date "+%F")"
   [ -n "$1" ] && filename+="-$1"
