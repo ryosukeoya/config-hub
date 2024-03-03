@@ -1,4 +1,4 @@
-﻿# Prompt
+# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
 
 # History
@@ -28,6 +28,7 @@ alias c='composer'
 alias cr='composer run-script'
 alias gm='gitmoji -c'
 alias l='ls -l'
+alias la='ls -al'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
@@ -37,9 +38,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias -g W=' | wc -l'
 alias -g G=' | grep'
 alias -g L=' | less'
+alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory hash
@@ -82,3 +83,4 @@ function today() {
 
   touch "${filename}.${ex}"
 }
+
