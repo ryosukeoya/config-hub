@@ -1,4 +1,4 @@
-﻿# Prompt
+# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
 
 # History
@@ -44,16 +44,16 @@ alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory hash
-hash -d c=/mnt/c
-hash -d n=/mnt/c/note
-hash -d nb=/mnt/c/note-backup
-hash -d s=/mnt/c/source
-hash -d z=/mnt/c/source/zsh
-hash -d g=/mnt/c/source/go
-hash -d a=/mnt/c/source/azure
-hash -d sh=/mnt/c/source/shell
-hash -d d=/mnt/c/source/docker
-hash -d b=/mnt/c/source/baleen-studio
+hash -d c=/home/ryo
+hash -d n=/home/ryo/note
+hash -d nb=/home/ryo/note-backup
+hash -d s=/home/ryo/source
+hash -d z=/home/ryo/source/zsh
+hash -d g=/home/ryo/source/go
+hash -d a=/home/ryo/source/azure
+hash -d sh=/home/ryo/source/shell
+hash -d d=/home/ryo/source/docker
+hash -d b=/home/ryo/source/baleen-studio
 
 # Go
 export GOROOT=/usr/local/go
@@ -84,4 +84,3 @@ function today() {
 
   touch "${filename}.${ex}"
 }
-
