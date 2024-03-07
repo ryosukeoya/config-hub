@@ -77,7 +77,13 @@ export EDITOR=nvim
 # Functions
 function today() {
   filename="$(date "+%F")"
-  [ -n "$1" ] && filename+="-$1"
+  # -p: Parent Directory
+  if [ "$1" = 'p' ]; then
+    parent_dir=$(basename $PWD)
+    filename+="-${parent_dir}"
+  elif [ -n "$1"]; then
+    filename+="-$1"
+  fi
 
   ex='md'
   [ -n "$2" ] && ex="$2"
