@@ -18,17 +18,18 @@ bindkey '^n' history-beginning-search-forward-end
 
 # Aliases
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias l='ls -l'
+alias la='ls -al'
+alias rm='rm -i'
+alias s='source'
+alias v='nvim'
 alias g='git'
 alias ga='git add .'
-alias v='nvim'
+alias gm='gitmoji -c'
 alias n='npm'
-alias s='source'
 alias nr='npm run'
 alias c='composer'
 alias cr='composer run-script'
-alias gm='gitmoji -c'
-alias l='ls -l'
-alias la='ls -al'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
@@ -89,4 +90,12 @@ function today() {
   [ -n "$2" ] && ex="$2"
 
   touch "${filename}.${ex}"
+}
+
+function ghq_peco {
+  local dir="$( ghq list -p | peco )"
+  if [ ! -z "$dir" ] ; then
+    cd "$dir"
+    code .
+  fi
 }
