@@ -43,6 +43,7 @@ alias -g G=' | grep'
 alias -g L=' | less'
 alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
+alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 
 # Directory hash
 hash -d c=/home/ryo
@@ -55,6 +56,9 @@ hash -d a=/home/ryo/source/azure
 hash -d sh=/home/ryo/source/shell
 hash -d d=/home/ryo/source/docker
 hash -d b=/home/ryo/source/baleen-studio
+hash -d g=/home/ryo/ghq/github.com
+hash -d gb=/home/ryo/ghq/github.com/baleen-studio
+hash -d gp=/home/ryo/ghq/github.com/plusmedi
 
 # Go
 export GOROOT=/usr/local/go
@@ -63,14 +67,14 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # Direnv
-eval "$(direnv hook bash)"
+# eval "$(direnvhook bash)"
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 # Editor
 export EDITOR=nvim
@@ -78,9 +82,9 @@ export EDITOR=nvim
 # Functions
 function today() {
   filename="$(date "+%F")"
-  # -p: Parent Directory
-  if [ "$1" = 'p' ]; then
-    current_dir=$(basename $PWD)
+  # c: Current Directory
+  if [ "$1" = 'c' ]; then
+    current_dir="$(basename $PWD)"
     filename+="-${current_dir}"
   elif [ -n "$1"]; then
     filename+="-$1"
