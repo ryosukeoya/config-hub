@@ -55,7 +55,6 @@ hash -d g=/home/ryo/source/go
 hash -d a=/home/ryo/source/azure
 hash -d sh=/home/ryo/source/shell
 hash -d d=/home/ryo/source/docker
-hash -d b=/home/ryo/source/baleen-studio
 hash -d g=/home/ryo/ghq/github.com
 hash -d gb=/home/ryo/ghq/github.com/baleen-studio
 hash -d gp=/home/ryo/ghq/github.com/plusmedi
@@ -72,9 +71,9 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # Pyenv
-# export PYENV_ROOT="$HOME/.pyenv"
-# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Editor
 export EDITOR=nvim
@@ -103,3 +102,4 @@ function ghq_peco {
     code .
   fi
 }
+
