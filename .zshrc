@@ -1,4 +1,4 @@
-# Prompt
+﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
 
 # History
@@ -20,8 +20,6 @@ bindkey '^n' history-beginning-search-forward-end
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias l='ls -l'
 alias la='ls -al'
-alias rm='rm -i'
-alias s='source'
 alias v='nvim'
 alias g='git'
 alias ga='git add .'
@@ -34,6 +32,8 @@ alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
 alias re='exec $SHELL -l'
+alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
+# alias explorer='/mnt/c/Windows/explorer.exe'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -43,7 +43,6 @@ alias -g G=' | grep'
 alias -g L=' | less'
 alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
-alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 
 # Directory hash
 hash -d c=/home/ryo
@@ -59,14 +58,14 @@ hash -d g=/home/ryo/ghq/github.com
 hash -d gb=/home/ryo/ghq/github.com/baleen-studio
 hash -d gp=/home/ryo/ghq/github.com/plusmedi
 
+# Direnv
+eval "$(direnv hook zsh)"
+
 # Go
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/source/go
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# Direnv
-# eval "$(direnvhook bash)"
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
