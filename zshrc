@@ -81,11 +81,10 @@ export EDITOR=nvim
 
 # Functions
 function today() {
-  filename="$(date "+%F")"
+  local filename="$(date "+%F")"
   # c: Current Directory
   if [ "$1" = 'c' ]; then
-    current_dir="$(basename $PWD)"
-    filename+="-${current_dir}"
+    filename+="-$(basename $PWD)"
   elif [ -n "$1" ]; then
     filename+="-$1"
   fi
