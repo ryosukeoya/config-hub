@@ -84,7 +84,7 @@ function today() {
   if [ "$1" = 'c' ]; then
     current_dir="$(basename $PWD)"
     filename+="-${current_dir}"
-  elif [ -n "$1"]; then
+  elif [ -n "$1" ]; then
     filename+="-$1"
   fi
 
@@ -101,4 +101,3 @@ function ghq_peco {
     code .
   fi
 }
-
