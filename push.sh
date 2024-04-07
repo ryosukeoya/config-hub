@@ -1,5 +1,6 @@
 #!bin/bash
 
+eval "$(ssh-agent)"
 git add .
 
 if ! git diff-index --quiet HEAD --; then
