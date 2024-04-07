@@ -1,8 +1,8 @@
 #!bin/bash
 
-git add .
+current_branch=$(git branch --show-current)
+diff_files=$(git diff --name-only HEAD)
 
-if ! git diff-index --quiet HEAD --; then
-    git commit -m "$1" -m "$2"
-    git push origin HEAD
-fi
+git add .
+git commit -m "update ${diff_files}"
+git push origin HEAD
