@@ -1,5 +1,5 @@
 ﻿# Prompt
-PROMPT="%B%K{236}%F{252}%n@%m %C %f%k%b > "
+PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
 # History
 export HISTFILE=${HOME}/.zsh_history
