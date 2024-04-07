@@ -18,6 +18,7 @@ bindkey '^n' history-beginning-search-forward-end
 
 # Aliases
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias s='source'
 alias l='ls -l'
 alias la='ls -al'
 alias v='nvim'
@@ -57,6 +58,7 @@ hash -d d=/home/ryo/source/docker
 hash -d g=/home/ryo/ghq/github.com
 hash -d gb=/home/ryo/ghq/github.com/baleen-studio
 hash -d gp=/home/ryo/ghq/github.com/plusmedi
+hash -d gr=/home/ryo/ghq/github.com/ryosukeoya
 
 # Direnv
 eval "$(direnv hook zsh)"
