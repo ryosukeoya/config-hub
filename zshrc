@@ -29,7 +29,6 @@ alias n='npm'
 alias nr='npm run'
 alias c='composer'
 alias cr='composer run-script'
-alias sshp='eval ssh-agent > ~/.ssh-agent-env'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
