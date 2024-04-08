@@ -19,6 +19,7 @@ bindkey '^n' history-beginning-search-forward-end
 # Aliases
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias s='source'
+alias rm='rm -i'
 alias l='ls -l'
 alias la='ls -al'
 alias v='nvim'
