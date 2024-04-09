@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/zsh
 
 current_branch=$(git branch --show-current)
 diff_files=$(git diff --name-only HEAD)
