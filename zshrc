@@ -2,7 +2,7 @@
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
 # History
-export HISTFILE=$HOME/.zsh_history
+export HISTFILE="${HOME}/.zsh_history"
 export HISTSIZE=200
 export SAVEHIST=1000
 
@@ -46,39 +46,39 @@ alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory Hash
-hash -d s=/home/ryo/source
-hash -d gh=/home/ryo/ghq/github.com
-hash -d b=/home/ryo/ghq/github.com/baleen-studio
-hash -d p=/home/ryo/ghq/github.com/plusmedi
-hash -d r=/home/ryo/ghq/github.com/ryosukeoya
-hash -d z=/home/ryo/ghq/github.com/ryosukeoya/zsh
-hash -d g=/home/ryo/ghq/github.com/ryosukeoya/git
-hash -d v=/home/ryo/ghq/github.com/ryosukeoya/vscode
-hash -d n=/mnt/c/Users/大屋諒恭/OneDrive\ -\ Baleen\ Studio/ドキュメント/note
+hash -d s="${HOME}/source"
+hash -d gh="${HOME}/ghq/github.com"
+hash -d b="${HOME}/ghq/github.com/baleen-studio"
+hash -d p="${HOME}/ghq/github.com/plusmedi"
+hash -d r="${HOME}/ghq/github.com/ryosukeoya"
+hash -d z="${HOME}/ghq/github.com/ryosukeoya/zsh"
+hash -d g="${HOME}/ghq/github.com/ryosukeoya/git"
+hash -d v="${HOME}/ghq/github.com/ryosukeoya/vscode"
+hash -d n='/mnt/c/Users/大屋諒恭/OneDrive - Baleen Studio/ドキュメント/note'
 
 # Direnv
 eval "$(direnv hook zsh)"
 
 # Exports
-export PATH=$HOME/.local/bin:$PATH
+export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
 # Go
 export GOROOT=/usr/local/go
-export GOPATH=$HOME/source/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export GOPATH="${HOME}/source/go"
+export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
 export GOPRIVATE=github.com/baleen.studio,github.com/plusmedi,$(go env GOPRIVATE) 
 
 # VSCode
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # Pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="${HOME}/.pyenv"
+[[ -d "${PYENV_ROOT}/bin" ]] && export PATH="${PYENV_ROOT}/bin:${PATH}"
 eval "$(pyenv init -)"
 
 # Functions
-autoload -U $HOME/ghq/github.com/ryosukeoya/zsh/push.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/push.sh
 
 function today() {
   local filename="$(date "+%F")"
@@ -96,8 +96,8 @@ function today() {
 }
 
 function ghq_peco {
-  local dir="$( ghq list -p | peco )"
-  if [ ! -z "$dir" ] ; then
+  local dir="$(ghq list -p | peco)"
+  if [ ! -z "${dir}" ] ; then
     cd "$dir"
     code .
   fi
