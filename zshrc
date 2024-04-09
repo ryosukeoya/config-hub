@@ -59,10 +59,9 @@ hash -d n=/mnt/c/Users/大屋諒恭/OneDrive\ -\ Baleen\ Studio/ドキュメン�
 # Direnv
 eval "$(direnv hook zsh)"
 
-export EDITOR=nvim
-
 # Exports
 export PATH=$HOME/.local/bin:$PATH
+export EDITOR=nvim
 
 # Go
 export GOROOT=/usr/local/go
