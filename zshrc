@@ -59,26 +59,27 @@ hash -d n=/mnt/c/Users/大屋諒恭/OneDrive\ -\ Baleen\ Studio/ドキュメン�
 # Direnv
 eval "$(direnv hook zsh)"
 
+export EDITOR=nvim
+
+# Exports
+export PATH=$HOME/.local/bin:$PATH
+
 # Go
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/source/go
-export PATH=$HOME/.local/bin:$PATH
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
-
 export GOPRIVATE=github.com/baleen.studio,github.com/plusmedi,$(go env GOPRIVATE) 
+
+# VSCode
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Editor
-export EDITOR=nvim
-
 # Functions
-autoload ~/home/ryo/ghq/github.com/ryosukeoya/zsh/push.sh
+autoload $HOME/ghq/github.com/ryosukeoya/zsh/push.sh
 
 function today() {
   local filename="$(date "+%F")"
