@@ -71,6 +71,8 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
+export GOPRIVATE=github.com/baleen.studio,github.com/plusmedi,$(go env GOPRIVATE) 
+
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
