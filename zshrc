@@ -80,6 +80,8 @@ eval "$(pyenv init -)"
 export EDITOR=nvim
 
 # Functions
+autoload ~/home/ryo/ghq/github.com/ryosukeoya/zsh/push.sh
+
 function today() {
   local filename="$(date "+%F")"
   # c: Current Directory
