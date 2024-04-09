@@ -17,7 +17,6 @@ bindkey '^p' history-beginning-search-backward-end
 bindkey '^n' history-beginning-search-forward-end
 
 # Aliases
-alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias s='source'
 alias rm='rm -i'
 alias l='ls -l'
@@ -47,18 +46,15 @@ alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory hash
-hash -d c=/home/ryo
-hash -d n=/mnt/c/Users/大屋諒恭/OneDrive\ -\ Baleen\ Studio/ドキュメント/note
 hash -d s=/home/ryo/source
-hash -d g=/home/ryo/source/go
-hash -d a=/home/ryo/source/azure
-hash -d sh=/home/ryo/source/shell
-hash -d d=/home/ryo/source/docker
 hash -d g=/home/ryo/ghq/github.com
 hash -d gb=/home/ryo/ghq/github.com/baleen-studio
 hash -d gp=/home/ryo/ghq/github.com/plusmedi
 hash -d gr=/home/ryo/ghq/github.com/ryosukeoya
-hash -d z=/home/ryo/ghq/github.com/ryosukeoya/zsh
+hash -d grz=/home/ryo/ghq/github.com/ryosukeoya/zsh
+hash -d grg=/home/ryo/ghq/github.com/ryosukeoya/git
+hash -d grv=/home/ryo/ghq/github.com/ryosukeoya/vscode
+hash -d n=/mnt/c/Users/大屋諒恭/OneDrive\ -\ Baleen\ Studio/ドキュメント/note
 
 # Direnv
 eval "$(direnv hook zsh)"
