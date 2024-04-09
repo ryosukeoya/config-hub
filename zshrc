@@ -2,14 +2,14 @@
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
 # History
-export HISTFILE=${HOME}/.zsh_history
+export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=200
 export SAVEHIST=1000
 
 # Bindkey
 bindkey -e
 
-# History beginning search
+# History Beginning Search
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
@@ -45,15 +45,15 @@ alias -g L=' | less'
 alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
-# Directory hash
+# Directory Hash
 hash -d s=/home/ryo/source
-hash -d g=/home/ryo/ghq/github.com
-hash -d gb=/home/ryo/ghq/github.com/baleen-studio
-hash -d gp=/home/ryo/ghq/github.com/plusmedi
-hash -d gr=/home/ryo/ghq/github.com/ryosukeoya
-hash -d grz=/home/ryo/ghq/github.com/ryosukeoya/zsh
-hash -d grg=/home/ryo/ghq/github.com/ryosukeoya/git
-hash -d grv=/home/ryo/ghq/github.com/ryosukeoya/vscode
+hash -d gh=/home/ryo/ghq/github.com
+hash -d b=/home/ryo/ghq/github.com/baleen-studio
+hash -d p=/home/ryo/ghq/github.com/plusmedi
+hash -d r=/home/ryo/ghq/github.com/ryosukeoya
+hash -d z=/home/ryo/ghq/github.com/ryosukeoya/zsh
+hash -d g=/home/ryo/ghq/github.com/ryosukeoya/git
+hash -d v=/home/ryo/ghq/github.com/ryosukeoya/vscode
 hash -d n=/mnt/c/Users/大屋諒恭/OneDrive\ -\ Baleen\ Studio/ドキュメント/note
 
 # Direnv
