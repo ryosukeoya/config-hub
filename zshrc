@@ -1,6 +1,8 @@
 ﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
+eval `ssh-agent`
+
 # History
 export HISTFILE="${HOME}/.zsh_history"
 export HISTSIZE=200
