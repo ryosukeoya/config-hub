@@ -1,4 +1,39 @@
 {
+  "workbench.colorTheme": "Material Theme Ocean",
+  "easysass.formats": [
+    {
+      "format": "expanded",
+      "extension": ".css"
+    },
+    {
+      "format": "compressed",
+      "extension": ".min.css"
+    }
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "workbench.sideBar.location": "left",
+  "prettier.printWidth": 200,
+  "diffEditor.ignoreTrimWhitespace": false,
+  // "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  // "vscode-neovim.neovimInitVimPaths.darwin": "/Users/ryosuke/.config/nvim/init.vim",
+  "prettier.singleQuote": true,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".php$",
+        "cmd": "prettier ${file} --write"
+      }
+    ]
+  },
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "files.autoSave": "afterDelay",
+  "workbench.iconTheme": "material-icon-theme",
+
   "commands": [
     {
       "match": ".scss",
@@ -6,10 +41,10 @@
       "cmd": "npm run lint:s"
     }
   ],
-  "workbench.colorcustomizations": {
-    // "editorcursor.foreground": "#15ff00",
-    // "terminalcursor.foreground": "#22a3ff"
-  },
+  // "workbench.colorcustomizations": {
+  // "editorcursor.foreground": "#15ff00",
+  // "terminalcursor.foreground": "#22a3ff"
+  // },
   // <--------------------------------- PHP --------------------------------->
   "[php]": {
     "editor.defaultformatter": "esbenp.prettier-vscode"
@@ -55,9 +90,9 @@
   // <--------------------------------- Vim --------------------------------->
   // "vim.vimrc.enable": true,
   // <--------------------------------- VSCode Neovim --------------------------------->
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "vscode-neovim.useWSL": true,
-  "vscode-neovim.neovimInitVimPaths.linux": "/root/.config/nvim/init.vim",
+  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  // "vscode-neovim.useWSL": true,
+  // "vscode-neovim.neovimInitVimPaths.linux": "/root/.config/nvim/init.vim",
   // prettier
   "prettier.singlequote": true,
   // formatter
@@ -111,16 +146,12 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "markdown-preview-github-styles.colorTheme": "light",
-  "todo-tree.filtering.excludeGlobs": [
-    "**/node_modules/*"
-  ],
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
   "editor.quickSuggestions": {
     "strings": true
   },
   "workbench.iconTheme": "material-icon-theme",
-  "css.customData": [
-    "./.vscode/custom.css-data.json"
-  ],
+  "css.customData": ["./.vscode/custom.css-data.json"],
   "ruby.intellisense": "rubyLocate",
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.fileListLayout": "flat",
@@ -137,9 +168,7 @@
   "editor.formatOnSave": true,
   "files.autoSave": "afterDelay",
   "markdown-mermaid.darkModeTheme": "base",
-  "trailing-spaces.syntaxIgnore": [
-    "markdown"
-  ],
+  "trailing-spaces.syntaxIgnore": ["markdown"],
   "githubIssues.queries": [
     {
       "label": "My Issues",
@@ -155,12 +184,7 @@
     }
   ],
   "phpstan.timeout": 20000,
-  "cSpell.ignoreWords": [
-    "ryosuke",
-    "neovim",
-    "nvim",
-    "protoc"
-  ],
+  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
   // [Hightlight]
   "highlight.regexes": {
     // "((【 ATTENTION 】))": {
@@ -264,4 +288,5 @@
     }
   },
   "terminal.integrated.sendKeybindingsToShell": true,
+  "remote.autoForwardPortsSource": "hybrid"
 }
