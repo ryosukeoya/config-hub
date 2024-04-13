@@ -1,6 +1,5 @@
-#!/bin/zsh
+#!/bin/bash
 
-current_branch=$(git branch --show-current)
 diff_files=$(git diff --name-only HEAD)
 
 git add .

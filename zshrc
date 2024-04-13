@@ -1,4 +1,6 @@
-﻿# Prompt
+﻿#!/bin/zsh
+
+# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
 eval `ssh-agent`
@@ -57,6 +59,7 @@ hash -d z="${HOME}/ghq/github.com/ryosukeoya/zsh"
 hash -d g="${HOME}/ghq/github.com/ryosukeoya/git"
 hash -d v="${HOME}/ghq/github.com/ryosukeoya/vscode"
 hash -d n='/mnt/c/Users/大屋諒恭/OneDrive - Baleen Studio/ドキュメント/note'
+hash -d vs='/mnt/c/Users/大屋諒恭/AppData/Roaming/Code/User'
 
 # Direnv
 eval "$(direnv hook zsh)"
