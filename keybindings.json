@@ -1,4 +1,4 @@
-// Place your key bindings in this file to override the defaults auto[]
+// Place your key bindings in this file to override the defaults
 [
   {
     "key": "ctrl+p",
@@ -431,20 +431,74 @@
     "when": "editorTextFocus && neovim.ctrlKeysInsert.z && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
   },
   {
-  "key": "ctrl+s ctrl+p",
-  "command": "toggle",
-  "when": "editorTextFocus",
-  "args": {
+    "key": "ctrl+s ctrl+p",
+    "command": "toggle",
+    "when": "editorTextFocus",
+    "args": {
       "id": "cSpell",
       "value": [
-          {
-            "cSpell.enabled": true,
-          },
-          {
-            "cSpell.enabled": false,
-          }
+        {
+          "cSpell.enabled": true
+        },
+        {
+          "cSpell.enabled": false
+        }
       ]
-    },
+    }
+  },
+  {
+    "key": "ctrl+oem_4",
+    "command": "-editor.action.outdentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+oem_6",
+    "command": "-editor.action.indentLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+win+v",
+    "command": "extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl && !terminal.Focus"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "-extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+oem_1",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "ctrl+oem_7",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+up",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.terminal.killEditor",
+    "when": "terminalEditorFocus && terminalFocus && terminalHasBeenCreated || terminalEditorFocus && terminalFocus && terminalProcessSupported"
   }
 ]
-
