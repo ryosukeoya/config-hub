@@ -86,11 +86,6 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+f",
-    "command": "cursorRight",
-    "when": "terminalFocus"
-  },
-  {
     "key": "ctrl+b",
     "command": "cursorLeft",
     "when": "terminalFocus"
