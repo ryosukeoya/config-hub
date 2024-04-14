@@ -83,6 +83,7 @@ export PYENV_ROOT="${HOME}/.pyenv"
 eval "$(pyenv init -)"
 
 # Functions
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/push.sh
 
 function today() {
