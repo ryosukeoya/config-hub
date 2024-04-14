@@ -3,8 +3,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 200,
   "diffEditor.ignoreTrimWhitespace": false,
-  // "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
-  // "vscode-neovim.neovimInitVimPaths.darwin": "/Users/ryosuke/.config/nvim/init.vim",
   "prettier.singleQuote": true,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "editor.formatOnPaste": false,
@@ -20,13 +18,8 @@
       "cmd": "npm run lint:s"
     }
   ],
-  // "workbench.colorcustomizations": {
-  // "editorcursor.foreground": "#15ff00",
-  // "terminalcursor.foreground": "#22a3ff"
-  // },
   "[php]": {
     "editor.defaultformatter": "esbenp.prettier-vscode"
-    // "editor.defaultformatter": "junstyle.php-cs-fixer"
   },
   "emeraldwalk.runonsave": {
     "commands": [
@@ -36,10 +29,8 @@
       }
     ]
   },
-  // PHP CS Fixer
   "php-cs-fixer.executablepath": "${extensionpath}/php-cs-fixer.phar",
   "php-cs-fixer.lastdownload": 1699252189212,
-  // Blade
   "[blade]": {
     "editor.defaultformatter": "onecentlin.laravel-blade",
     "editor.formatonsave": true
@@ -57,20 +48,14 @@
     "editor.defaultformatter": "redhat.java"
   },
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  // Neovim
-  // "vscode-neovim.neoviminitvimpaths.darwin": "/users/ryosuke/.config/nvim/init.vim",
-  "vim.usesystemclipboard": true, // os のクリップボードと同期
-  "vim.enableneovim": true,
-  // "vim.neovimpath": "/usr/local/bin/nvim",
-  // <--------------------------------- Vim --------------------------------->
-  // "vim.vimrc.enable": true,
-  // <--------------------------------- VSCode Neovim --------------------------------->
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "/etc/vim/vimrc",
+  "vim.usesystemclipboard": true,
+  // "vim.enableneovim": true,
+  // "vim.neovimpath": "/usr/local/bin/nvim,
+  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
   // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  // "vscode-neovim.useWSL": true,
-  // "vscode-neovim.neovimInitVimPaths.linux": "/root/.config/nvim/init.vim",
-  // prettier
   "prettier.singlequote": true,
-  // formatter
   "editor.autoclosingbrackets": "always",
   "editor.defaultformatter": "esbenp.prettier-vscode",
   "editor.formatonpaste": true,
@@ -94,7 +79,6 @@
     },
     "editor.formatOnPaste": true
   },
-  // Live Sass Compiler
   "security.workspace.trust.enabled": false,
   "livesasscompile.settings.formats": [
     {
@@ -158,11 +142,7 @@
   ],
   "phpstan.timeout": 20000,
   "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
-  // Hightlight
   "highlight.regexes": {
-    // "((【 ATTENTION 】))": {
-    //   "decorations": [{ "color": "#b7573d" }]
-    // },
     "((ASK_TO:))": {
       "decorations": [
         {
