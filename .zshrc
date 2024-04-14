@@ -1,6 +1,4 @@
-﻿#!/bin/zsh
-
-# Prompt
+﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
 eval `ssh-agent`
