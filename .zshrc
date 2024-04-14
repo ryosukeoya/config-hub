@@ -81,9 +81,9 @@ export PYENV_ROOT="${HOME}/.pyenv"
 eval "$(pyenv init -)"
 
 # Functions
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/backup.sh
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/push.sh
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/today.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
 
 function ghq_peco {
   local dir="$(ghq list -p | peco)"
