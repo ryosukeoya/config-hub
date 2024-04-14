@@ -85,21 +85,7 @@ eval "$(pyenv init -)"
 # Functions
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/push.sh
-
-function today() {
-  local filename="$(date "+%F")"
-  # c: Current Directory
-  if [ "$1" = 'c' ]; then
-    filename+="-$(basename $PWD)"
-  elif [ -n "$1" ]; then
-    filename+="-$1"
-  fi
-
-  ex='md'
-  [ -n "$2" ] && ex="$2"
-
-  touch "${filename}.${ex}"
-}
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/today.sh
 
 function ghq_peco {
   local dir="$(ghq list -p | peco)"
