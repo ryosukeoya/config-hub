@@ -70,7 +70,7 @@ export EDITOR=nvim
 export GOROOT=/usr/local/go
 export GOPATH="${HOME}/source/go"
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
-export GOPRIVATE=github.com/baleen.studio,github.com/plusmedi,$(go env GOPRIVATE) 
+export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi
 
 # VSCode
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
