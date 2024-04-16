@@ -10,7 +10,6 @@
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
   "files.autoSave": "afterDelay",
-
   "commands": [
     {
       "match": ".scss",

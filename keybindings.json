@@ -537,5 +537,45 @@
   {
     "key": "ctrl+k ctrl+t",
     "command": "-workbench.action.selectTheme"
+  },
+  {
+    "key": "ctrl+win+j",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+alt+pagedown",
+    "command": "-workbench.action.terminal.scrollDown",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+win+k",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+alt+pageup",
+    "command": "-workbench.action.terminal.scrollUp",
+    "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+  },
+  {
+    "key": "ctrl+k ctrl+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "workbench.debug.action.focusRepl"
+  },
+  {
+    "key": "ctrl+k ctrl+g",
+    "command": "gitlens.views.graph.focus"
+  },
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "~remote.forwardedPorts.focus"
+  },
+  {
+    "key": "ctrl+k ctrl+p",
+    "command": "workbench.action.problems.focus"
   }
 ]
