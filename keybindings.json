@@ -577,5 +577,33 @@
   {
     "key": "ctrl+k ctrl+p",
     "command": "workbench.action.problems.focus"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "gitlens.views.home.focus"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "github:login.focus"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "dockerContainers.focus"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "gitlens.views.commitDetails.focus"
+  },
+  {
+    "key": "ctrl+shift+r",
+    "command": "targetsWsl.focus"
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "makefile.outline.focus"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "github-actions.empty-view.focus"
   }
 ]
