@@ -47,8 +47,8 @@
     "editor.defaultformatter": "redhat.java"
   },
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  "vim.vimrc.enable": true,
-  "vim.vimrc.path": "/etc/vim/vimrc",
+  // "vim.vimrc.enable": true,
+  // "vim.vimrc.path": "/etc/vim/vimrc",
   "vim.usesystemclipboard": true,
   // "vim.enableneovim": true,
   // "vim.neovimpath": "/usr/local/bin/nvim,
@@ -77,6 +77,9 @@
       "source.fixAll.markdownlint": "explicit"
     },
     "editor.formatOnPaste": true
+  },
+  "markdownlint.config": {
+    "MD036": false,
   },
   "security.workspace.trust.enabled": false,
   "livesasscompile.settings.formats": [
