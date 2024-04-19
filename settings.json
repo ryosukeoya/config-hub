@@ -252,5 +252,8 @@
     "terminal.findMatchBackground": "#ffe6a044",
     "terminal.findMatchBorder": "#ff9670c6",
     "editorStickyScroll.background": "#0a1a2ec1",
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#9398a07a"
   }
 }
