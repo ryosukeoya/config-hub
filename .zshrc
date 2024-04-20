@@ -35,6 +35,7 @@ alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
 alias re='exec $SHELL -l'
+alias gcd='cd $(ghq list -p | peco)'
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 # alias explorer='/mnt/c/Windows/explorer.exe'
 
@@ -84,11 +85,3 @@ eval "$(pyenv init -)"
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
-
-function ghq_peco {
-  local dir="$(ghq list -p | peco)"
-  if [ ! -z "${dir}" ] ; then
-    cd "$dir"
-    code .
-  fi
-}
