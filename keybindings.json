@@ -57,16 +57,6 @@
   },
   {
     "key": "ctrl+p",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "-selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-  },
-  {
-    "key": "ctrl+p",
     "command": "cursorUp",
     "when": "terminalFocus"
   },
@@ -128,11 +118,6 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+n",
-    "command": "workbench.action.quickOpenNavigateNextInViewPicker",
-    "when": "inQuickOpen && inViewsPicker"
-  },
-  {
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenNavigatePreviousInViewPicker",
     "when": "inQuickOpen && inViewsPicker"
@@ -141,11 +126,6 @@
     "key": "ctrl+shift+e",
     "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
-  },
-  {
-    "key": "ctrl+q",
-    "command": "-workbench.action.quickOpenNavigateNextInViewPicker",
-    "when": "inQuickOpen && inViewsPicker"
   },
   {
     "key": "ctrl+shift+p",
@@ -609,5 +589,30 @@
   {
     "key": "ctrl+k ctrl+l",
     "command": "workbench.action.splitEditorToRightGroup"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "-extension.vim_winCtrlQ",
+    "when": "editorTextFocus && vim.active && vim.use<C-q> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
   }
 ]
