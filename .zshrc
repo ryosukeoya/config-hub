@@ -49,6 +49,7 @@ alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory Hash
 hash -d s="${HOME}/source"
+hash -d n="${HOME}/source/note"
 hash -d gh="${HOME}/ghq/github.com"
 hash -d b="${HOME}/ghq/github.com/baleen-studio"
 hash -d p="${HOME}/ghq/github.com/plusmedi"
@@ -56,7 +57,6 @@ hash -d r="${HOME}/ghq/github.com/ryosukeoya"
 hash -d z="${HOME}/ghq/github.com/ryosukeoya/zsh"
 hash -d g="${HOME}/ghq/github.com/ryosukeoya/git"
 hash -d v="${HOME}/ghq/github.com/ryosukeoya/vscode"
-hash -d n='/mnt/c/Users/大屋諒恭/OneDrive - Baleen Studio/ドキュメント/note'
 hash -d vs='/mnt/c/Users/大屋諒恭/AppData/Roaming/Code/User'
 
 # Direnv
