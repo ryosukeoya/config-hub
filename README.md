@@ -4,6 +4,6 @@
 
 ## Branches
 
-- main: My first generation Mac
-- mac2: My second generation Mac
-- windows: My windows PC
+- main: My first Mac PC
+- mac2: My second Mac PC
+- windows: My Windows PC
