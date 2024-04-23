@@ -63,10 +63,12 @@
   "typescript.preferences.quotestyle": "single",
   "prettier.jsxsinglequote": true,
   "[prisma]": {
-    "editor.defaultformatter": "prisma.prisma"
+    "editor.defaultformatter": "prisma.prisma",
   },
   "[shellscript]": {
-    "editor.defaultformatter": "foxundermoon.shell-format"
+    "editor.defaultformatter": "foxundermoon.shell-format",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true
   },
   "[dockerfile]": {
     "editor.defaultformatter": "ms-azuretools.vscode-docker"
