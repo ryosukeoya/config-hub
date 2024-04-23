@@ -49,7 +49,7 @@
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   // "vim.vimrc.enable": true,
   // "vim.vimrc.path": "/etc/vim/vimrc",
-  "vim.usesystemclipboard": true,
+  "vim.useSystemClipboard": true,
   // "vim.enableneovim": true,
   // "vim.neovimpath": "/usr/local/bin/nvim,
   // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
@@ -72,14 +72,19 @@
     "editor.defaultformatter": "ms-azuretools.vscode-docker"
   },
   "[markdown]": {
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
     },
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
   "markdownlint.config": {
     "MD036": false,
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
   },
   "security.workspace.trust.enabled": false,
   "livesasscompile.settings.formats": [
@@ -144,14 +149,16 @@
   ],
   "phpstan.timeout": 20000,
   "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
+  "todohighlight.isEnable": true,
+  "todohighlight.isCaseSensitive": true,
+  // "todohighlight.keywords": [
+  //   "TODO",
+  //   {
+  //     "color": "#fff",
+  //     "backgroundColor": "#fff41a",
+  //   }
+  // ],
   "highlight.regexes": {
-    "((ASK_TO:))": {
-      "decorations": [
-        {
-          "color": "#a1dc3b"
-        }
-      ]
-    },
     "((TODO:))": {
       "decorations": [
         {
@@ -159,10 +166,17 @@
         }
       ]
     },
+    "((ASK_TO:))": {
+      "decorations": [
+        {
+          "color": "#a1dc3b"
+        }
+      ]
+    },
     "((MUST:))": {
       "decorations": [
         {
-          "color": "#ff5900"
+          "color": "#ff0000"
         }
       ]
     },
