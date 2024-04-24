@@ -168,6 +168,13 @@
         }
       ]
     },
+    "((REMOVE_ME))": {
+      "decorations": [
+        {
+          "color": "#ebd534"
+        }
+      ]
+    },
     "((ASK_TO:))": {
       "decorations": [
         {
