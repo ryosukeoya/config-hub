@@ -39,7 +39,7 @@ alias re='exec $SHELL -l'
 alias gcd='cd $(ghq list -p | peco)'
 alias gco='code $(ghq list -p | peco)'
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
-# alias explorer='/mnt/c/Windows/explorer.exe'
+alias explorer='/mnt/c/Windows/explorer.exe'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -87,5 +87,7 @@ eval "$(pyenv init -)"
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
+
+# Node
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
