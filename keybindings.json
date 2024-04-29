@@ -614,5 +614,13 @@
     "key": "ctrl+p",
     "command": "workbench.action.quickOpenSelectPrevious",
     "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k ctrl+u",
+    "command": "outline.focus"
+  },
+  {
+    "key": "ctrl+k ctrl+c",
+    "command": "workbench.action.closeAuxiliaryBar"
   }
 ]
