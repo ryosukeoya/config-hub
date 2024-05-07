@@ -1,7 +1,7 @@
 {
-  "editor.formatOnSave": true,
   "workbench.colorTheme": "Material Theme Ocean",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "prettier.printWidth": 200,
   "diffEditor.ignoreTrimWhitespace": false,
   "prettier.singleQuote": true,
@@ -121,7 +121,6 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "markdown-preview-github-styles.colorTheme": "light",
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
   "editor.quickSuggestions": {
     "strings": true
   },
@@ -167,6 +166,20 @@
   //     "backgroundColor": "#fff41a",
   //   }
   // ],
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "todo-tree.general.tags": [
+    "TODO",
+    "REMOVE_ME",
+    "ASK_TO"
+    "MUST"
+    "ATTENTION"
+    "BUG",
+    "HACK",
+    "FIXME",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
   "highlight.regexes": {
     "((TODO:))": {
       "decorations": [
