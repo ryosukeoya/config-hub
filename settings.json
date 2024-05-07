@@ -170,15 +170,16 @@
   "todo-tree.general.tags": [
     "TODO",
     "REMOVE_ME",
-    "ASK_TO"
-    "MUST"
-    "ATTENTION"
+    "ASK_TO",
     "BUG",
     "HACK",
     "FIXME",
+    "ASK_TO"
+    "MUST",
+    "ATTENTION",
     "XXX",
     "[ ]",
-    "[x]"
+    "[x]",
   ],
   "highlight.regexes": {
     "((TODO:))": {
