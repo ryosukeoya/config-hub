@@ -622,5 +622,13 @@
   {
     "key": "ctrl+k ctrl+c",
     "command": "workbench.action.closeAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    "key": "ctrl+numpad0",
+    "command": "-workbench.action.zoomReset"
   }
 ]

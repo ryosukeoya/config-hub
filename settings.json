@@ -166,6 +166,7 @@
   //     "backgroundColor": "#fff41a",
   //   }
   // ],
+  "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
   "todo-tree.general.tags": [
     "TODO",
@@ -174,7 +175,7 @@
     "BUG",
     "HACK",
     "FIXME",
-    "ASK_TO"
+    "ASK_TO",
     "MUST",
     "ATTENTION",
     "XXX",
@@ -182,61 +183,16 @@
     "[x]",
   ],
   "highlight.regexes": {
-    "((TODO:))": {
-      "decorations": [
-        {
-          "color": "#fff41a"
-        }
-      ]
-    },
-    "((REMOVE_ME))": {
-      "decorations": [
-        {
-          "color": "#ebd534"
-        }
-      ]
-    },
-    "((ASK_TO:))": {
-      "decorations": [
-        {
-          "color": "#a1dc3b"
-        }
-      ]
-    },
-    "((MUST:))": {
-      "decorations": [
-        {
-          "color": "#ff0000"
-        }
-      ]
-    },
-    "((ATTENTION:))": {
-      "decorations": [
-        {
-          "color": "#ff0000"
-        }
-      ]
-    },
-    "((FIXME:))": {
-      "decorations": [
-        {
-          "color": "#fff2f2",
-          "backgroundColor": "#ff0000"
-        }
-      ]
-    },
     "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "filterFileRegex": ".*(?<!CHANGELOG.md)$",
       "decorations": [
         {
-          "overviewRulerColor": "#ffcc00",
-          "backgroundColor": "#ffcc00",
-          "color": "#1f1f1f",
+          "overviewRulerColor": "#fff41a",
+          "color": "#fff41a",
           "fontWeight": "bold"
         },
         {
-          "backgroundColor": "#ffcc00",
-          "color": "#1f1f1f"
+          "color": "#fff41a"
         }
       ]
     },
