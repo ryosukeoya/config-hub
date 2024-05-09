@@ -10,7 +10,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": true
   },
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
@@ -55,6 +55,7 @@
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   // "vim.vimrc.enable": true,
   // "vim.vimrc.path": "/etc/vim/vimrc",
+  "vim.startInInsertMode": true,
   "vim.useSystemClipboard": true,
   // "vim.enableneovim": true,
   // "vim.neovimpath": "/usr/local/bin/nvim,
@@ -193,7 +194,7 @@
     "ATTENTION",
     "XXX",
     "[ ]",
-    "[x]",
+    "[x]"
   ],
   "highlight.regexes": {
     "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
