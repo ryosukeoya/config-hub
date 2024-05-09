@@ -96,6 +96,19 @@
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
+  "yaml.format.enable": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
   "security.workspace.trust.enabled": false,
   "livesasscompile.settings.formats": [
     {
