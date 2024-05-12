@@ -30,6 +30,7 @@ ms-vscode.makefile-tools
 oderwat.indent-rainbow
 pkl.pkl-vscode
 pranaygp.vscode-css-peek
+rebornix.toggle
 redhat.vscode-yaml
 shardulm94.trailing-spaces
 streetsidesoftware.code-spell-checker

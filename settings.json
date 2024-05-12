@@ -182,17 +182,7 @@
   // ],
   "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
-  "todo-tree.general.tags": [
-    "TODO",
-    "FIX",
-    "FIXME",
-    "MUST",
-    "MUST_NOT",
-    "SHOULD",
-    "SHOULD_NOT",
-    "ASK_TO",
-    "REMOVE_ME"
-  ],
+  "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
   "highlight.regexes": {
     "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "filterFileRegex": ".*(?<!CHANGELOG.md)$",
@@ -271,5 +261,6 @@
   "editor.tokenColorCustomizations": {
     "comments": "#9398a07a"
   },
-  "hediet.vscode-drawio.resizeImages": null
+  "hediet.vscode-drawio.resizeImages": null,
+  "cSpell.enabled": true
 }
