@@ -173,13 +173,6 @@
   "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
   "todohighlight.isEnable": true,
   "todohighlight.isCaseSensitive": true,
-  // "todohighlight.keywords": [
-  //   "TODO",
-  //   {
-  //     "color": "#fff",
-  //     "backgroundColor": "#fff41a",
-  //   }
-  // ],
   "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
   "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
