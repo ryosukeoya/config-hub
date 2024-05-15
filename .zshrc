@@ -89,7 +89,7 @@ export EDITOR=nvim
 export GOROOT="${HOME}/source/goroot"
 export GOPATH="${HOME}/source/gopath"
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
-export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi
+export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosukeoya
 
 # VSCode
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
