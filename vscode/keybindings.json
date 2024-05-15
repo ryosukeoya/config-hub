@@ -663,5 +663,9 @@
   {
     "key": "ctrl+c",
     "command": "-editor.action.clipboardCopyAction"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "todo-tree-view.focus"
   }
 ]
