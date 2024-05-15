@@ -29,8 +29,8 @@
   "emeraldwalk.runonsave": {
     "commands": [
       {
-        "match": ".php$",
-        "cmd": "prettier ${file} --write"
+        "match": ".go$",
+        "cmd": "go fmt ${file}"
       }
     ]
   },
