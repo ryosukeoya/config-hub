@@ -23,15 +23,27 @@
       "cmd": "npm run lint:s"
     }
   ],
+  "[go]": {
+    "editor.formatOnSave": true,
+    // "editor.codeActionsOnSave": {
+    //   "source.organizeImports": ""
+    // }
+  },
+  "go.formatTool": "gofmt",
+  "go.formatFlags": ["-w"],
   "[php]": {
     "editor.defaultformatter": "esbenp.prettier-vscode"
   },
   "emeraldwalk.runonsave": {
     "commands": [
       {
-        "match": ".php$",
-        "cmd": "prettier ${file} --write"
-      }
+        "match": ".go$",
+        "cmd": "go fmt ${file}"
+      },
+      {
+        "match": ".go$",
+        "cmd": "goimports -w ${file}"
+      },
     ]
   },
   "php-cs-fixer.executablepath": "${extensionpath}/php-cs-fixer.phar",
@@ -84,6 +96,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
     },
+    "files.insertFinalNewline": false,
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true
   },
@@ -255,5 +268,5 @@
     "comments": "#9398a07a"
   },
   "hediet.vscode-drawio.resizeImages": null,
-  "cSpell.enabled": true
+  "cSpell.enabled": false
 }
