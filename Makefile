@@ -1,8 +1,9 @@
-SHELL := /bin/zsh
+SHELL := /bin/bash
 .DEFAULT_GOAL = echo_targets
 
 targets := $(shell ls -d */ | sed -e 's#/$$# #g' | tr -d '\n')
 
+.PHONY: e echo_targets
 e: echo_targets
 echo_targets:
 	@echo ${targets}
