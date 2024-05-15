@@ -41,12 +41,18 @@ alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
 alias re='exec $SHELL -l'
-alias sc='code $(find ~s -type d -maxdepth 1 | peco)'
+
+alias scd='cd $(find ~s -type d -maxdepth 1 | peco)'
+alias sco='code $(find ~s -type d -maxdepth 1 | peco)'
+alias scp='find ~s -type d -maxdepth 1 | peco C'
+alias sa='code --add $(find ~s -type d -maxdepth 1 | peco)'
+
 alias gcd='cd $(ghq list -p | peco)'
 alias gco='code $(ghq list -p | peco)'
 alias gcp='ghq list -p | peco C'
 alias gb='gh browse --repo $(ghq list | peco)'
 alias ga='code --add $(ghq list -p | peco)'
+
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 alias explorer='/mnt/c/Windows/explorer.exe'
 
