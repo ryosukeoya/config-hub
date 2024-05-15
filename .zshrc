@@ -36,6 +36,7 @@ alias c='composer'
 alias cr='composer run-script'
 alias hu='hugo'
 alias hus='hugo server'
+alias ps='pkgsite -open .'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
