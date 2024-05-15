@@ -42,16 +42,16 @@ alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
 alias re='exec $SHELL -l'
 
-alias scd='cd $(find ~s -type d -maxdepth 1 | peco)'
-alias sco='code $(find ~s -type d -maxdepth 1 | peco)'
-alias scp='find ~s -type d -maxdepth 1 | peco C'
-alias sa='code --add $(find ~s -type d -maxdepth 1 | peco)'
+alias scd='cd $(find ~sa -maxdepth 1 -type d | peco)'
+alias sco='code $(find ~sa -maxdepth 1 -type d | peco)'
+alias sa='code --add $(find ~sa -maxdepth 1 -type d | peco)'
+alias scp='find ~sa -type -maxdepth 1 d | peco C'
 
 alias gcd='cd $(ghq list -p | peco)'
 alias gco='code $(ghq list -p | peco)'
+alias ga='code --add $(ghq list -p | peco)'
 alias gcp='ghq list -p | peco C'
 alias gb='gh browse --repo $(ghq list | peco)'
-alias ga='code --add $(ghq list -p | peco)'
 
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 alias explorer='/mnt/c/Windows/explorer.exe'
@@ -67,6 +67,7 @@ alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 
 # Directory Hash
 hash -d s="${HOME}/source"
+hash -d sa="${HOME}/source/sandbox"
 hash -d n="${HOME}/source/note"
 hash -d gh="${HOME}/ghq/github.com"
 hash -d b="${HOME}/ghq/github.com/baleen-studio"
@@ -85,8 +86,8 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
 # Go
-export GOROOT=/usr/local/go
-export GOPATH="${HOME}/source/go"
+export GOROOT="${HOME}/source/goroot"
+export GOPATH="${HOME}/source/gopath"
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
 export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi
 
