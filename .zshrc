@@ -65,7 +65,7 @@ alias -g L=' | less'
 alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 # change the error color to red
-alias -g EP="| awk '{gsub(/error|Error/, \"\033[31m&\033[0m\"); print}'"
+alias -g EE="| awk '{gsub(/error|Error/, \"\033[31m&\033[0m\"); print}'"
 
 # Directory Hash
 hash -d s="${HOME}/source"
