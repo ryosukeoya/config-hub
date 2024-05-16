@@ -64,6 +64,8 @@ alias -g G=' | grep'
 alias -g L=' | less'
 alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
+# change the error color to red
+alias -g EP="| awk '{gsub(/error|Error/, \"\033[31m&\033[0m\"); print}'"
 
 # Directory Hash
 hash -d s="${HOME}/source"
@@ -104,6 +106,6 @@ autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
 
-# Node
+# Nod""::e
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
