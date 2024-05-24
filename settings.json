@@ -25,20 +25,19 @@
     "editor.formatOnSave": true
   },
   "go.formatTool": "gofmt",
-  "go.formatFlags": ["-w"],
   "go.lintTool": "golangci-lint",
   "go.lintOnSave": "workspace",
   "go.lintFlags": ["--fast"],
   "emeraldwalk.runonsave": {
     "commands": [
-      {
-        "match": ".go$",
-        "cmd": "goimports -w ${file}"
-      },
+      // {
+      //   "match": ".go$",
+      //   "cmd": "goimports -w ${file}"
+      // },
       {
         "match": ".go$",
         "cmd": "go vet ${workspace}"
-      },
+      }
     ]
   },
   "[php]": {
@@ -260,7 +259,7 @@
     "panelTitle.activeBorder": "#63c3dd",
     "terminal.findMatchBackground": "#2b2700ec",
     "terminal.findMatchBorder": "#7b700dec",
-    "editorStickyScroll.background": "#0a1a2ec1",
+    "editorStickyScroll.background": "#0a1a2ec1"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#9398a07a"
@@ -268,5 +267,6 @@
   "hediet.vscode-drawio.resizeImages": null,
   "cSpell.enabled": false,
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "window.confirmSaveUntitledWorkspace": false
 }
