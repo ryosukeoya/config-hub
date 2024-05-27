@@ -23,7 +23,7 @@
   ],
   "[go]": {
     "editor.formatOnSave": true,
-    "files.autoSave": "off"
+    "files.autoSave": "onFocusChange"
   },
   "go.formatTool": "gofmt",
   "go.lintTool": "golangci-lint",
