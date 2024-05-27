@@ -22,7 +22,8 @@
     }
   ],
   "[go]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "files.autoSave": "off"
   },
   "go.formatTool": "gofmt",
   "go.lintTool": "golangci-lint",
@@ -30,10 +31,10 @@
   "go.lintFlags": ["--fast"],
   "emeraldwalk.runonsave": {
     "commands": [
-      // {
-      //   "match": ".go$",
-      //   "cmd": "goimports -w ${file}"
-      // },
+      {
+        "match": ".go$",
+        "cmd": "goimports -w ${file}"
+      },
       {
         "match": ".go$",
         "cmd": "go vet ${workspace}"

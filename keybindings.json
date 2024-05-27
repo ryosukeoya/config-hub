@@ -375,7 +375,7 @@
     "when": "editorTextFocus && neovim.ctrlKeysInsert.z && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
   },
   {
-    "key": "ctrl+s ctrl+p",
+    "key": "ctrl+d ctrl+p",
     "command": "toggle",
     "when": "editorTextFocus",
     "args": {
@@ -637,7 +637,7 @@
     "when": "editorTextFocus && vim.active && vim.use<C-o> && !inDebugRepl"
   },
   {
-    "key": "ctrl+s ctrl+o",
+    "key": "ctrl+d ctrl+o",
     "command": "workbench.action.gotoSymbol",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
   },
@@ -755,7 +755,7 @@
     "command": "editor.action.goToTypeDefinition"
   },
   {
-    "key": "ctrl+s ctrl+w",
+    "key": "ctrl+d ctrl+s",
     "command": "workbench.action.switchWindow"
   },
   {
@@ -772,5 +772,20 @@
     "key": "delete",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+d ctrl+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
   }
 ]
