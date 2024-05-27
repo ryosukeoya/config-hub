@@ -657,14 +657,6 @@
     "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
   },
   {
-    "key": "ctrl+c",
-    "command": "editor.action.clipboardCopyAction"
-  },
-  {
-    "key": "ctrl+c",
-    "command": "-editor.action.clipboardCopyAction"
-  },
-  {
     "key": "ctrl+shift+b",
     "command": "todo-tree-view.focus"
   },
@@ -707,16 +699,6 @@
     "key": "alt+p",
     "command": "-keybindings.editor.toggleSortByPrecedence",
     "when": "inKeybindings"
-  },
-  {
-    "key": "ctrl+shift+oem_3",
-    "command": "workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
-  },
-  {
-    "key": "ctrl+shift+oem_3",
-    "command": "-workbench.action.terminal.new",
-    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
   },
   {
     "key": "ctrl+shift+oem_3",
@@ -771,5 +753,24 @@
   {
     "key": "ctrl+g ctrl+t",
     "command": "editor.action.goToTypeDefinition"
+  },
+  {
+    "key": "ctrl+s ctrl+w",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported && terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+oem_3",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "delete",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
   }
 ]
