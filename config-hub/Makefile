@@ -15,3 +15,7 @@ all: $(targets) ## pull all the specified targets
 $(targets): ## pull the specified targets
 	@echo "Pulling $@"
 	git subtree pull --prefix $@ $@ windows-baleen-studio
+
+.PHONY: tag
+tag: ## git tag $(date +%Y-%m-%d-%H%M%S)
+	git tag $(shell date +%Y-%m-%d-%H%M%S)
