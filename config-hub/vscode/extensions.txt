@@ -8,6 +8,7 @@ davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
 eamodio.gitlens
 editorconfig.editorconfig
+emeraldwalk.runonsave
 esbenp.prettier-vscode
 evilz.vscode-reveal
 fabiospampinato.vscode-highlight
@@ -15,6 +16,7 @@ foxundermoon.shell-format
 github.vscode-github-actions
 github.vscode-pull-request-github
 golang.go
+golang.go-nightly
 gruntfuggly.todo-tree
 jock.svg
 mechatroner.rainbow-csv
@@ -32,6 +34,7 @@ pkl.pkl-vscode
 pranaygp.vscode-css-peek
 rebornix.toggle
 redhat.vscode-yaml
+romanpeshkov.vscode-text-tables
 shardulm94.trailing-spaces
 streetsidesoftware.code-spell-checker
 tamasfe.even-better-toml

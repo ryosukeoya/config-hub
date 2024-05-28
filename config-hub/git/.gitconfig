@@ -8,6 +8,6 @@
 [pull]
 	rebase = false
 [url "git@github.com"]
-	insteadOf = https://github.com/baleen-studio,https://github.com/plusmedi
+	insteadOf = https://github.com/baleen-studio,https://github.com/plusmedi,https://github.com/ryosukeoya
 [init]
 	defaultBranch = main
