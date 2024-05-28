@@ -377,7 +377,7 @@
   {
     "key": "ctrl+d ctrl+p",
     "command": "toggle",
-    "when": "editorTextFocus",
+    "when": "editorTextFocus && !terminalFocus",
     "args": {
       "id": "cSpell",
       "value": [
@@ -639,7 +639,7 @@
   {
     "key": "ctrl+d ctrl+o",
     "command": "workbench.action.gotoSymbol",
-    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown && !terminalFocus"
   },
   {
     "key": "ctrl+shift+o",
@@ -756,7 +756,8 @@
   },
   {
     "key": "ctrl+d ctrl+s",
-    "command": "workbench.action.switchWindow"
+    "command": "workbench.action.switchWindow",
+    "when": " !terminalFocus"
   },
   {
     "key": "ctrl+shift+oem_3",
@@ -781,7 +782,7 @@
   {
     "key": "ctrl+d ctrl+d",
     "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
+    "when": "editorFocus && !terminalFocus"
   },
   {
     "key": "ctrl+d",
