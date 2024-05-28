@@ -41,11 +41,18 @@ alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
 alias re='exec $SHELL -l'
-alias gcd='cd $(ghq list | peco)'
-alias gco='code $(ghq list | peco)'
+
+alias scd='cd $(find ~sa -maxdepth 1 -type d | peco)'
+alias sco='code $(find ~sa -maxdepth 1 -type d | peco)'
+alias sa='code --add $(find ~sa -maxdepth 1 -type d | peco)'
+alias scp='find ~sa -type -maxdepth 1 d | peco C'
+
+alias gcd='cd $(ghq list -p | peco)'
+alias gco='code $(ghq list -p | peco)'
+alias ga='code --add $(ghq list -p | peco)'
 alias gcp='ghq list -p | peco C'
 alias gb='gh browse --repo $(ghq list | peco)'
-alias ga='code --add $(ghq list | peco)'
+
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 alias explorer='/mnt/c/Windows/explorer.exe'
 
@@ -57,9 +64,12 @@ alias -g G=' | grep'
 alias -g L=' | less'
 alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
+# change the error color to red
+alias -g EE="| awk '{gsub(/error|Error/, \"\033[31m&\033[0m\"); print}'"
 
 # Directory Hash
 hash -d s="${HOME}/source"
+hash -d sa="${HOME}/source/sandbox"
 hash -d n="${HOME}/source/note"
 hash -d gh="${HOME}/ghq/github.com"
 hash -d b="${HOME}/ghq/github.com/baleen-studio"
@@ -78,10 +88,10 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
 # Go
-export GOROOT=/usr/local/go
-export GOPATH="${HOME}/source/go"
+export GOROOT="${HOME}/source/goroot"
+export GOPATH="${HOME}/source/gopath"
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
-export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi
+export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosukeoya
 
 # VSCode
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
@@ -96,6 +106,6 @@ autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
 
-# Node
+# Nod""::e
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
