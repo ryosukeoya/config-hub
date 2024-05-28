@@ -1,12 +1,10 @@
 {
   "workbench.colorTheme": "Material Theme Ocean",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
   "prettier.printWidth": 200,
   "diffEditor.ignoreTrimWhitespace": false,
   "prettier.singleQuote": true,
   "security.workspace.trust.untrustedFiles": "newWindow",
-  "editor.formatOnPaste": false,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
@@ -25,26 +23,26 @@
   ],
   "[go]": {
     "editor.formatOnSave": true,
-    // "editor.codeActionsOnSave": {
-    //   "source.organizeImports": ""
-    // }
+    "files.autoSave": "onFocusChange"
   },
   "go.formatTool": "gofmt",
-  "go.formatFlags": ["-w"],
-  "[php]": {
-    "editor.defaultformatter": "esbenp.prettier-vscode"
-  },
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "workspace",
+  "go.lintFlags": ["--fast"],
   "emeraldwalk.runonsave": {
     "commands": [
       {
         "match": ".go$",
-        "cmd": "go fmt ${file}"
+        "cmd": "goimports -w ${file}"
       },
       {
         "match": ".go$",
-        "cmd": "goimports -w ${file}"
-      },
+        "cmd": "go vet ${workspace}"
+      }
     ]
+  },
+  "[php]": {
+    "editor.defaultformatter": "esbenp.prettier-vscode"
   },
   "php-cs-fixer.executablepath": "${extensionpath}/php-cs-fixer.phar",
   "php-cs-fixer.lastdownload": 1699252189212,
@@ -268,5 +266,8 @@
     "comments": "#9398a07a"
   },
   "hediet.vscode-drawio.resizeImages": null,
-  "cSpell.enabled": false
+  "cSpell.enabled": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "window.confirmSaveUntitledWorkspace": false
 }
