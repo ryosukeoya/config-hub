@@ -1,7 +1,7 @@
 ﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
-eval `ssh-agent`
+# eval `ssh-agent`
 
 # History
 export HISTFILE="${HOME}/.zsh_history"
@@ -107,6 +107,6 @@ autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/month.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
 
-# Nod""::e
+# Node
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
