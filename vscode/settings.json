@@ -33,7 +33,7 @@
   // "go.lintFlags": ["--fast"],
   "emeraldwalk.runonsave": {
     "commands": [
-    ]{
+    {
         "match": ".go$",
         "cmd": "goimports -w ${file}"
       }
