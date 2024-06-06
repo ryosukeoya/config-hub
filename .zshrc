@@ -90,9 +90,11 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
 # Go
-export GOROOT="${HOME}/source/goroot"
-export GOPATH="${HOME}/source/gopath"
-export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+GO_VERSION=go1.22.4
+alias go="${GOPATH}/bin/${GO_VERSION}"
+export GOROOT=`${GO_VERSION} env GOROOT`
+export GOPATH="${HOME}/gopath"
+export PATH="${GOROOT}/bin:${GOPATH}/bin:${PATH}"
 export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosukeoya
 
 # VSCode
