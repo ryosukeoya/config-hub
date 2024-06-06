@@ -1,4 +1,5 @@
 {
+  "window.newWindowProfile": "Default",
   "workbench.colorTheme": "Material Theme Ocean",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 200,
@@ -23,22 +24,23 @@
   ],
   "[go]": {
     "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
     "files.autoSave": "onFocusChange"
   },
   "go.formatTool": "gofmt",
-  "go.lintTool": "golangci-lint",
-  "go.lintOnSave": "workspace",
-  "go.lintFlags": ["--fast"],
+  // "go.lintTool": "golangci-lint",
+  // "go.lintOnSave": "workspace",
+  // "go.lintFlags": ["--fast"],
   "emeraldwalk.runonsave": {
     "commands": [
-      {
+    ]{
         "match": ".go$",
         "cmd": "goimports -w ${file}"
-      },
-      {
-        "match": ".go$",
-        "cmd": "go vet ${workspace}"
       }
+      // {
+      //   "match": ".go$",
+      //   "cmd": "go vet ${workspace}"
+      // }
     ]
   },
   "[php]": {

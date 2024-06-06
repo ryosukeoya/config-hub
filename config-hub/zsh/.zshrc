@@ -1,7 +1,7 @@
 ﻿# Prompt
 PROMPT="%B%K{236}%F{252}%n@%m %3d %f%k%b > "
 
-eval `ssh-agent`
+# eval `ssh-agent`
 
 # History
 export HISTFILE="${HOME}/.zsh_history"
@@ -36,7 +36,7 @@ alias c='composer'
 alias cr='composer run-script'
 alias hu='hugo'
 alias hus='hugo server'
-alias ps='pkgsite -open .'
+alias pks='pkgsite -open .'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
 alias h='history 0 | tail -n 40'
 alias x='xsel --clipboard --input'
@@ -66,6 +66,8 @@ alias -g W=' | wc -l'
 alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 # change the error color to red
 alias -g EE="| awk '{gsub(/error|Error/, \"\033[31m&\033[0m\"); print}'"
+alias -g TR="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); print}'"
+alias -g TC="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); print}' | awk '{gsub(/SETUP|RUN|CONT|PAUSE/, \"\033[36m&\033[0m\"); print}'"
 
 # Directory Hash
 hash -d s="${HOME}/source"
@@ -88,9 +90,11 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
 # Go
-export GOROOT="${HOME}/source/goroot"
-export GOPATH="${HOME}/source/gopath"
-export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+GO_VERSION=go1.22.4
+alias go="${GOPATH}/bin/${GO_VERSION}"
+export GOROOT=`${GO_VERSION} env GOROOT`
+export GOPATH="${HOME}/gopath"
+export PATH="${GOROOT}/bin:${GOPATH}/bin:${PATH}"
 export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosukeoya
 
 # VSCode
@@ -104,8 +108,10 @@ eval "$(pyenv init -)"
 # Functions
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/month.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/z-push.sh
 
-# Nod""::e
+# Node
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
