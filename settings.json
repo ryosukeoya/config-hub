@@ -33,7 +33,7 @@
   // "go.lintFlags": ["--fast"],
   "emeraldwalk.runonsave": {
     "commands": [
-    {
+      {
         "match": ".go$",
         "cmd": "goimports -w ${file}"
       }
@@ -258,6 +258,7 @@
   "workbench.colorCustomizations": {
     "tab.activeBorder": "#63c3dd",
     "activityBar.activeBorder": "#63c3dd",
+    "tab.selectedBackground": "#63c3dd15",
     "panel.border": "#bbbbbb0d",
     "panelTitle.activeBorder": "#63c3dd",
     "terminal.findMatchBackground": "#2b2700ec",
