@@ -47,8 +47,11 @@ alias sco='code $(find ~sa -maxdepth 1 -type d | peco)'
 alias sa='code --add $(find ~sa -maxdepth 1 -type d | peco)'
 alias scp='find ~sa -type -maxdepth 1 d | peco C'
 
+alias gh='history | peco'
+alias gcdl='cd $(ghq root | peco)'
 alias gcd='cd $(ghq list -p | peco)'
 alias gco='code $(ghq list -p | peco)'
+alias gcof='code $(ghq list -p | fzf)'
 alias ga='code --add $(ghq list -p | peco)'
 alias gcp='ghq list -p | peco C'
 alias gb='gh browse --repo $(ghq list | peco)'
@@ -115,3 +118,15 @@ autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/z-push.sh
 # Node
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+function search-history() {
+    local c=$(history | peco | sed -E 's/ *[0-9]+\*? *//')
+    if [[ -n $c ]]; then
+        eval "$c"
+    fi
+}
+
+zle -N search-history
+bindkey "^Xh" search-history
+bindkey -N sh search-history
+
