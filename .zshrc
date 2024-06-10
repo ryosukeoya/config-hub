@@ -47,8 +47,8 @@ alias sco='code $(find ~sa -maxdepth 1 -type d | peco)'
 alias sa='code --add $(find ~sa -maxdepth 1 -type d | peco)'
 alias scp='find ~sa -type -maxdepth 1 d | peco C'
 
-alias gh='history | peco'
-alias gcdl='cd $(ghq root | peco)'
+alias ghp='history | peco'
+alias gcdr='cd $(ghq root | peco)'
 alias gcd='cd $(ghq list -p | peco)'
 alias gco='code $(ghq list -p | peco)'
 alias gcof='code $(ghq list -p | fzf)'
@@ -70,7 +70,7 @@ alias -g C=' | iconv -t utf16 | /mnt/c/Windows/System32/clip.exe'
 # change the error color to red
 alias -g EE="| awk '{gsub(/error|Error/, \"\033[31m&\033[0m\"); print}'"
 alias -g TR="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); print}'"
-alias -g TC="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); print}' | awk '{gsub(/SETUP|RUN|CONT|PAUSE/, \"\033[36m&\033[0m\"); print}'"
+alias -g TC="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); gsub(/SETUP|RUN|CONT|PAUSE/, \"\033[36m&\033[0m\"); gsub(/+/, \"\033[32m&\033[0m\"); gsub(/-/, \"\033[35m&\033[0m\"); print}'"
 
 # Directory Hash
 hash -d s="${HOME}/source"
