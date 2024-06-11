@@ -28,9 +28,17 @@
     "files.autoSave": "onFocusChange"
   },
   "go.formatTool": "gofmt",
-  // "go.lintTool": "golangci-lint",
-  // "go.lintOnSave": "workspace",
-  // "go.lintFlags": ["--fast"],
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "workspace",
+  "go.lintFlags": ["--fast", "--config=${workspaceFolder}/.golangci.yml"],
+  "go.playground": {
+    "openbrowser": true,
+    "run": true,
+    "share": false
+  },
+  "gopls": {
+    "formatting.gofumpt": true
+  },
   "emeraldwalk.runonsave": {
     "commands": [
       {
@@ -272,5 +280,7 @@
   "cSpell.enabled": false,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "window.confirmSaveUntitledWorkspace": false
+  "window.confirmSaveUntitledWorkspace": false,
+  "remote.WSL.debug": true,
+  "remote.WSL.useShellEnvironment": true
 }
