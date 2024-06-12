@@ -1,7 +1,6 @@
 {
   "window.newWindowProfile": "Default",
   "workbench.colorTheme": "Material Theme Ocean",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 200,
   "diffEditor.ignoreTrimWhitespace": false,
   "prettier.singleQuote": true,
@@ -14,7 +13,6 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
-  "files.autoSave": "afterDelay",
   "commands": [
     {
       "match": ".scss",
@@ -93,9 +91,10 @@
     "editor.defaultformatter": "prisma.prisma"
   },
   "[shellscript]": {
-    "editor.defaultformatter": "foxundermoon.shell-format",
+    "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "[dockerfile]": {
     "editor.defaultformatter": "ms-azuretools.vscode-docker"
@@ -282,5 +281,9 @@
   "editor.formatOnSave": true,
   "window.confirmSaveUntitledWorkspace": false,
   "remote.WSL.debug": true,
-  "remote.WSL.useShellEnvironment": true
+  "remote.WSL.useShellEnvironment": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSave": "afterDelay",
 }
