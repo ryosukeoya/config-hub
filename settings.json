@@ -12,11 +12,11 @@
     "comments": "#9398a07a"
   },
   "[blade]": {
-    "editor.defaultformatter": "onecentlin.laravel-blade",
-    "editor.formatonsave": true
+    "editor.defaultFormatter": "onecentlin.laravel-blade",
+    "editor.formatOnSave": true
   },
   "[dockerfile]": {
-    "editor.defaultformatter": "ms-azuretools.vscode-docker"
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
   "[go]": {
     "editor.formatOnPaste": true,
@@ -24,7 +24,7 @@
     "files.autoSave": "onFocusChange"
   },
   "[java]": {
-    "editor.defaultformatter": "redhat.java"
+    "editor.defaultFormatter": "redhat.java"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -45,18 +45,18 @@
     "files.insertFinalNewline": false
   },
   "[php]": {
-    "editor.defaultformatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
-    "editor.defaultformatter": "prisma.prisma"
+    "editor.defaultFormatter": "prisma.prisma"
   },
   "[python]": {
-    "editor.defaultformatter": "ms-python.black-formatter",
-    "editor.formatonsave": false,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": false,
     "editor.formatontype": true
   },
   "[ruby]": {
-    "editor.defaultformatter": "svipas.prettier-plus"
+    "editor.defaultFormatter": "svipas.prettier-plus"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
