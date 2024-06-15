@@ -35,10 +35,6 @@
   "[php]": {
     "editor.defaultformatter": "esbenp.prettier-vscode"
   },
-  // "vim.enableneovim": true,
-  // "vim.neovimpath": "/usr/local/bin/nvim,
-  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
-  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "[prisma]": {
     "editor.defaultformatter": "prisma.prisma"
   },
@@ -228,7 +224,10 @@
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   // "vim.vimrc.enable": true,
-  // "vim.vimrc.path": "/etc/vim/vimrc",
+  // "vim.vimrc.path": "/etc/vi  // "vim.enableneovim": true,
+  // "vim.neovimpath": "/usr/local/bin/nvim,
+  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
+  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",m/vimrc",
   "vim.startInInsertMode": true,
   "vim.useSystemClipboard": true,
   "window.confirmSaveUntitledWorkspace": false,
