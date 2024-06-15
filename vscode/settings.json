@@ -1,173 +1,86 @@
 {
-  "window.newWindowProfile": "Default",
-  "workbench.colorTheme": "Material Theme Ocean",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.printWidth": 200,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "prettier.singleQuote": true,
-  "security.workspace.trust.untrustedFiles": "newWindow",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
   },
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "prettier.jsxSingleQuote": true,
-  "files.autoSave": "afterDelay",
-  "commands": [
-    {
-      "match": ".scss",
-      "isasync": true,
-      "cmd": "npm run lint:s"
-    }
-  ],
-  "[go]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "files.autoSave": "onFocusChange"
-  },
-  "go.formatTool": "gofmt",
-  // "go.lintTool": "golangci-lint",
-  // "go.lintOnSave": "workspace",
-  // "go.lintFlags": ["--fast"],
-  "emeraldwalk.runonsave": {
-    "commands": [
-    {
-        "match": ".go$",
-        "cmd": "goimports -w ${file}"
-      }
-      // {
-      //   "match": ".go$",
-      //   "cmd": "go vet ${workspace}"
-      // }
-    ]
-  },
-  "[php]": {
-    "editor.defaultformatter": "esbenp.prettier-vscode"
-  },
-  "php-cs-fixer.executablepath": "${extensionpath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastdownload": 1699252189212,
-  "[blade]": {
-    "editor.defaultformatter": "onecentlin.laravel-blade",
-    "editor.formatonsave": true
-  },
-  "blade.format.enable": true,
-  "[python]": {
-    "editor.defaultformatter": "ms-python.black-formatter",
-    "editor.formatonsave": true,
-    "editor.formatontype": true
-  },
-  "[ruby]": {
-    "editor.defaultformatter": "svipas.prettier-plus"
-  },
-  "[java]": {
-    "editor.defaultformatter": "redhat.java"
-  },
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
-  // "vim.vimrc.enable": true,
-  // "vim.vimrc.path": "/etc/vim/vimrc",
-  "vim.startInInsertMode": true,
-  "vim.useSystemClipboard": true,
-  // "vim.enableneovim": true,
-  // "vim.neovimpath": "/usr/local/bin/nvim,
-  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
-  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "prettier.singlequote": true,
-  "editor.autoclosingbrackets": "always",
-  "editor.defaultformatter": "esbenp.prettier-vscode",
-  "editor.formatonpaste": true,
-  "security.workspace.trust.untrustedfiles": "newwindow",
-  "javascript.preferences.quotestyle": "single",
-  "typescript.preferences.quotestyle": "single",
-  "prettier.jsxsinglequote": true,
-  "[prisma]": {
-    "editor.defaultformatter": "prisma.prisma"
-  },
-  "[shellscript]": {
-    "editor.defaultformatter": "foxundermoon.shell-format",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+  "editor.stickyScroll.defaultModel": "outlineModel",
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "comments": "#9398a07a"
   },
   "[dockerfile]": {
-    "editor.defaultformatter": "ms-azuretools.vscode-docker"
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[go]": {
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true
   },
   "[markdown]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
     },
-    "files.insertFinalNewline": false,
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "files.insertFinalNewline": false
   },
-  "markdownlint.config": {
-    "MD024": false,
-    "MD036": false,
-    "MD041": false
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": false,
+    "editor.formatontype": true
+  },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format",
+    "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true
+    "files.autoSave": "afterDelay"
   },
-  "yaml.format.enable": true,
   "[yaml]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.autoIndent": "keep",
     "editor.defaultFormatter": "redhat.vscode-yaml",
     "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "keep",
-    "diffEditor.ignoreTrimWhitespace": false,
     "editor.quickSuggestions": {
-      "other": true,
       "comments": false,
+      "other": true,
       "strings": true
-    }
-  },
-  "security.workspace.trust.enabled": false,
-  "livesasscompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionname": ".css",
-      "savepath": "/sol/contents/it/lp/engineer_001/css"
-    }
-  ],
-  "easysass.formats": [
-    {
-      "format": "expanded",
-      "extension": ".css"
     },
-    {
-      "format": "compressed",
-      "extension": ".min.css"
-    }
-  ],
-  "explorer.confirmDragAndDrop": false,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
-  "javascript.suggest.autoImports": true,
-  "typescript.suggest.autoImports": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "markdown-preview-github-styles.colorTheme": "light",
-  "editor.quickSuggestions": {
-    "strings": true
+    "editor.tabSize": 2
   },
-  "workbench.iconTheme": "material-icon-theme",
+  "cSpell.enabled": false,
+  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
   "css.customData": ["./.vscode/custom.css-data.json"],
-  "ruby.intellisense": "rubyLocate",
-  "githubPullRequests.pullBranch": "never",
-  "githubPullRequests.fileListLayout": "flat",
-  "svelte.enable-ts-plugin": true,
-  "namespaceResolver.sortAlphabetically": true,
-  "editor.tabSize": 2,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "cmd": "goimports -w ${file}",
+        "match": ".go$"
+      }
+    ]
+  },
+  "explorer.confirmDragAndDrop": false,
+  "files.autoSave": "afterDelay",
   "git.confirmSync": false,
-  "intelephense.diagnostics.undefinedTypes": false,
-  "php.codeLens.enabled": false,
-  "gitlens.views.commits.showBranchComparison": false,
-  "gitlens.views.branches.files.layout": "list",
-  "gitlens.views.commits.files.layout": "list",
-  "gitlens.views.remotes.files.layout": "list",
-  "markdown-mermaid.darkModeTheme": "base",
-  "trailing-spaces.syntaxIgnore": ["markdown"],
   "githubIssues.queries": [
     {
       "label": "My Issues",
@@ -182,94 +95,145 @@
       "query": "state:open repo:${owner}/${repository} sort:updated-desc"
     }
   ],
-  "phpstan.timeout": 20000,
-  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
-  "todohighlight.isEnable": true,
-  "todohighlight.isCaseSensitive": true,
-  "todo-tree.highlights.enabled": false,
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
-  "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
+  "githubPullRequests.fileListLayout": "flat",
+  "githubPullRequests.pullBranch": "never",
+  "gitlens.views.branches.files.layout": "list",
+  "gitlens.views.commits.files.layout": "list",
+  "gitlens.views.commits.showBranchComparison": false,
+  "gitlens.views.remotes.files.layout": "list",
+  "go.formatTool": "gofmt",
+  "go.lintFlags": ["--fast", "--config=${workspaceFolder}/.golangci.yml"],
+  "go.lintOnSave": "workspace",
+  "go.lintTool": "golangci-lint",
+  "go.playground": {
+    "openbrowser": true,
+    "run": true,
+    "share": false
+  },
+  "gopls": {
+    "formatting.gofumpt": true
+  },
+  "hediet.vscode-drawio.resizeImages": null,
   "highlight.regexes": {
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-      "decorations": [
-        {
-          "overviewRulerColor": "#fff41a",
-          "color": "#fff41a",
-          "fontWeight": "bold"
-        },
-        {
-          "color": "#fff41a"
-        }
-      ]
-    },
     "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIX|FIXME|MUST|MUST_NOT|REMOVE_ME|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!(CHANGELOG.md|package.json))$",
       "decorations": [
         {
-          "overviewRulerColor": "#ff0000",
           "backgroundColor": "#ff0000",
           "color": "#fff",
-          "fontWeight": "bold"
+          "fontWeight": "bold",
+          "overviewRulerColor": "#ff0000"
         },
         {
           "backgroundColor": "#ff0000",
           "color": "#fff"
         }
-      ]
-    },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-      "decorations": [
-        {
-          "overviewRulerColor": "#00ccff",
-          "backgroundColor": "#00ccff",
-          "color": "#1f1f1f",
-          "fontWeight": "bold"
-        },
-        {
-          "backgroundColor": "#00ccff",
-          "color": "#1f1f1f"
-        }
-      ]
+      ],
+      "filterFileRegex": ".*(?<!(CHANGELOG.md|package.json))$"
     },
     "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
       "decorations": [
         {
-          "overviewRulerColor": "#cc00cc",
           "backgroundColor": "#cc00cc",
           "color": "#1f1f1f",
-          "fontWeight": "bold"
+          "fontWeight": "bold",
+          "overviewRulerColor": "#cc00cc"
         },
         {
           "backgroundColor": "#cc00cc",
           "color": "#1f1f1f"
         }
-      ]
+      ],
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$"
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "decorations": [
+        {
+          "backgroundColor": "#00ccff",
+          "color": "#1f1f1f",
+          "fontWeight": "bold",
+          "overviewRulerColor": "#00ccff"
+        },
+        {
+          "backgroundColor": "#00ccff",
+          "color": "#1f1f1f"
+        }
+      ],
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$"
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "decorations": [
+        {
+          "color": "#fff41a",
+          "fontWeight": "bold",
+          "overviewRulerColor": "#fff41a"
+        },
+        {
+          "color": "#fff41a"
+        }
+      ],
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$"
     }
   },
-  "terminal.integrated.sendKeybindingsToShell": false,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "markdown-mermaid.darkModeTheme": "base",
+  "markdown-preview-github-styles.colorTheme": "light",
+  "markdownlint.config": {
+    "MD024": false,
+    "MD036": false,
+    "MD041": false
+  },
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 200,
+  "prettier.singleQuote": true,
   "remote.autoForwardPortsSource": "hybrid",
-  "editor.stickyScroll.enabled": false,
-  "workbench.tree.enableStickyScroll": true,
+  "remote.WSL.debug": true,
+  "remote.WSL.useShellEnvironment": true,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.untrustedFiles": "newWindow",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.sendKeybindingsToShell": false,
+  "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.maxLineCount": 5,
-  "editor.stickyScroll.defaultModel": "outlineModel",
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIX",
+    "FIXME",
+    "MUST",
+    "MUST_NOT",
+    "SHOULD",
+    "SHOULD_NOT",
+    "ASK_TO",
+    "REMOVE_ME"
+  ],
+  "todo-tree.highlights.enabled": false,
+  "trailing-spaces.syntaxIgnore": ["markdown"],
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  // "vim.vimrc.enable": true,
+  // "vim.vimrc.path": "/etc/vi  // "vim.enableneovim": true,
+  // "vim.neovimpath": "/usr/local/bin/nvim,
+  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
+  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",m/vimrc",
+  "vim.startInInsertMode": true,
+  "vim.useSystemClipboard": true,
+  "window.confirmSaveUntitledWorkspace": false,
+  "window.newWindowProfile": "Default",
   "workbench.colorCustomizations": {
-    "tab.activeBorder": "#63c3dd",
     "activityBar.activeBorder": "#63c3dd",
+    "editorStickyScroll.background": "#0a1a2ec1",
     "panel.border": "#bbbbbb0d",
     "panelTitle.activeBorder": "#63c3dd",
+    "tab.activeBorder": "#63c3dd",
+    "tab.selectedBackground": "#63c3dd15",
     "terminal.findMatchBackground": "#2b2700ec",
-    "terminal.findMatchBorder": "#7b700dec",
-    "editorStickyScroll.background": "#0a1a2ec1"
+    "terminal.findMatchBorder": "#7b700dec"
   },
-  "editor.tokenColorCustomizations": {
-    "comments": "#9398a07a"
-  },
-  "hediet.vscode-drawio.resizeImages": null,
-  "cSpell.enabled": false,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "window.confirmSaveUntitledWorkspace": false
+  "workbench.colorTheme": "Material Theme Ocean",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.enableStickyScroll": true,
+  "yaml.format.enable": true
 }
