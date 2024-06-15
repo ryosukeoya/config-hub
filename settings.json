@@ -1,4 +1,16 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.stickyScroll.defaultModel": "outlineModel",
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "comments": "#9398a07a"
+  },
   "[blade]": {
     "editor.defaultformatter": "onecentlin.laravel-blade",
     "editor.formatonsave": true
@@ -68,18 +80,6 @@
   "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
   "css.customData": ["./.vscode/custom.css-data.json"],
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "editor.stickyScroll.defaultModel": "outlineModel",
-  "editor.stickyScroll.enabled": false,
-  "editor.tabSize": 2,
-  "editor.tokenColorCustomizations": {
-    "comments": "#9398a07a"
-  },
   "emeraldwalk.runonsave": {
     "commands": [
       {
