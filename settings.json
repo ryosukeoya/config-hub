@@ -13,13 +13,6 @@
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
-  "commands": [
-    {
-      "match": ".scss",
-      "isasync": true,
-      "cmd": "npm run lint:s"
-    }
-  ],
   "[go]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
@@ -43,25 +36,18 @@
         "match": ".go$",
         "cmd": "goimports -w ${file}"
       }
-      // {
-      //   "match": ".go$",
-      //   "cmd": "go vet ${workspace}"
-      // }
     ]
   },
   "[php]": {
     "editor.defaultformatter": "esbenp.prettier-vscode"
   },
-  "php-cs-fixer.executablepath": "${extensionpath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastdownload": 1699252189212,
   "[blade]": {
     "editor.defaultformatter": "onecentlin.laravel-blade",
     "editor.formatonsave": true
   },
-  "blade.format.enable": true,
   "[python]": {
     "editor.defaultformatter": "ms-python.black-formatter",
-    "editor.formatonsave": true,
+    "editor.formatonsave": false,
     "editor.formatontype": true
   },
   "[ruby]": {
@@ -70,7 +56,6 @@
   "[java]": {
     "editor.defaultformatter": "redhat.java"
   },
-  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
   // "vim.vimrc.enable": true,
   // "vim.vimrc.path": "/etc/vim/vimrc",
   "vim.startInInsertMode": true,
@@ -79,14 +64,6 @@
   // "vim.neovimpath": "/usr/local/bin/nvim,
   // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
   // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "prettier.singlequote": true,
-  "editor.autoclosingbrackets": "always",
-  "editor.defaultformatter": "esbenp.prettier-vscode",
-  "editor.formatonpaste": true,
-  "security.workspace.trust.untrustedfiles": "newwindow",
-  "javascript.preferences.quotestyle": "single",
-  "typescript.preferences.quotestyle": "single",
-  "prettier.jsxsinglequote": true,
   "[prisma]": {
     "editor.defaultformatter": "prisma.prisma"
   },
@@ -131,25 +108,7 @@
     }
   },
   "security.workspace.trust.enabled": false,
-  "livesasscompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionname": ".css",
-      "savepath": "/sol/contents/it/lp/engineer_001/css"
-    }
-  ],
-  "easysass.formats": [
-    {
-      "format": "expanded",
-      "extension": ".css"
-    },
-    {
-      "format": "compressed",
-      "extension": ".min.css"
-    }
-  ],
   "explorer.confirmDragAndDrop": false,
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -160,15 +119,12 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "css.customData": ["./.vscode/custom.css-data.json"],
-  "ruby.intellisense": "rubyLocate",
   "githubPullRequests.pullBranch": "never",
   "githubPullRequests.fileListLayout": "flat",
-  "svelte.enable-ts-plugin": true,
-  "namespaceResolver.sortAlphabetically": true,
   "editor.tabSize": 2,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "git.confirmSync": false,
-  "intelephense.diagnostics.undefinedTypes": false,
-  "php.codeLens.enabled": false,
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.branches.files.layout": "list",
   "gitlens.views.commits.files.layout": "list",
@@ -189,10 +145,7 @@
       "query": "state:open repo:${owner}/${repository} sort:updated-desc"
     }
   ],
-  "phpstan.timeout": 20000,
   "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
-  "todohighlight.isEnable": true,
-  "todohighlight.isCaseSensitive": true,
   "todo-tree.highlights.enabled": false,
   "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
   "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
@@ -277,13 +230,11 @@
   },
   "hediet.vscode-drawio.resizeImages": null,
   "cSpell.enabled": false,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "window.confirmSaveUntitledWorkspace": false,
   "remote.WSL.debug": true,
   "remote.WSL.useShellEnvironment": true,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "afterDelay"
 }
