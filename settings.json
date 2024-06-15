@@ -11,10 +11,6 @@
   "editor.tokenColorCustomizations": {
     "comments": "#9398a07a"
   },
-  "[blade]": {
-    "editor.defaultFormatter": "onecentlin.laravel-blade",
-    "editor.formatOnSave": true
-  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -22,9 +18,6 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "files.autoSave": "onFocusChange"
-  },
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -48,15 +41,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[prisma]": {
-    "editor.defaultFormatter": "prisma.prisma"
+    "editor.defaultFormatter": "Prisma.prisma"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": false,
     "editor.formatontype": true
-  },
-  "[ruby]": {
-    "editor.defaultFormatter": "svipas.prettier-plus"
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
