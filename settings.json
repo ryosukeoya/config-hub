@@ -1,16 +1,4 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "editor.stickyScroll.defaultModel": "outlineModel",
-  "editor.stickyScroll.enabled": false,
-  "editor.tabSize": 2,
-  "editor.tokenColorCustomizations": {
-    "comments": "#9398a07a"
-  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -29,6 +17,11 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
   },
+  "[makefile]": {
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 8
+  },
   "[markdown]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
@@ -36,6 +29,11 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "files.insertFinalNewline": false
+  },
+  "[mk]": {
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 8
   },
   "[php]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -46,7 +44,7 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": false,
-    "editor.formatontype": true
+    "editor.formatOnType": true
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
@@ -66,10 +64,37 @@
     },
     "editor.tabSize": 2
   },
-  "cSpell.enabled": true,
-  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
-  "css.customData": ["./.vscode/custom.css-data.json"],
-  "diffEditor.ignoreTrimWhitespace": false,
+  "cSpell.enabled": false,
+  "cSpell.ignoreWords": [
+    "ryosuke",
+    "neovim",
+    "nvim",
+    "protoc"
+  ],
+  "css.customData": [
+    "./.vscode/custom.css-data.json"
+  ],
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.stickyScroll.defaultModel": "outlineModel",
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "comments": "#9398a07a",
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
+  },
   "emeraldwalk.runonsave": {
     "commands": [
       {
@@ -79,6 +104,11 @@
     ]
   },
   "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.envrc.*": "dotenv",
+    "*.mk": "makefile",
+    ".env*": "dotenv"
+  },
   "files.autoSave": "afterDelay",
   "git.confirmSync": false,
   "githubIssues.queries": [
@@ -97,12 +127,16 @@
   ],
   "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullBranch": "never",
+  "gitlens.ai.experimental.model": "openai:gpt-4o",
   "gitlens.views.branches.files.layout": "list",
   "gitlens.views.commits.files.layout": "list",
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.remotes.files.layout": "list",
   "go.formatTool": "gofmt",
-  "go.lintFlags": ["--fast", "--config=${workspaceFolder}/.golangci.yml"],
+  "go.lintFlags": [
+    "--fast",
+    "--config=${workspaceFolder}/.golangci.yml"
+  ],
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.playground": {
@@ -178,12 +212,16 @@
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown-mermaid.darkModeTheme": "base",
-  "markdown-preview-github-styles.colorTheme": "light",
   "markdownlint.config": {
     "MD024": false,
     "MD036": false,
     "MD041": false
   },
+  "material-icon-theme.files.associations": {
+    ".envrc": "dotenv",
+    ".envrc.local": "dotenv"
+  },
+  "material-icon-theme.files.color": "#90a4ae",
   "prettier.jsxSingleQuote": true,
   "prettier.printWidth": 200,
   "prettier.singleQuote": true,
@@ -196,19 +234,27 @@
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.maxLineCount": 5,
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
-  "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*"
+  ],
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIX",
+    "FIXME",
+    "MUST",
+    "MUST_NOT",
+    "SHOULD",
+    "SHOULD_NOT",
+    "ASK_TO",
+    "REMOVE_ME"
+  ],
   "todo-tree.highlights.enabled": false,
-  "trailing-spaces.syntaxIgnore": ["markdown"],
+  "trailing-spaces.syntaxIgnore": [
+    "markdown"
+  ],
   "typescript.preferences.quoteStyle": "single",
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // "vim.vimrc.enable": true,
-  // "vim.vimrc.path": "/etc/vi  // "vim.enableneovim": true,
-  // "vim.neovimpath": "/usr/local/bin/nvim,
-  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
-  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",m/vimrc",
-  "vim.startInInsertMode": true,
   "vim.useSystemClipboard": true,
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowProfile": "Default",
