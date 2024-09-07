@@ -387,7 +387,7 @@
       ]
     },
     "command": "toggle",
-    "key": "ctrl+d ctrl+p",
+    "key": "ctrl+s ctrl+p",
     "when": "editorTextFocus && !terminalFocus"
   },
   {
@@ -462,7 +462,7 @@
   },
   {
     "command": "workbench.action.terminal.focusFind",
-    "key": "ctrl+f",
+    "key": "ctrl+alt+f",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
   },
   {
@@ -638,7 +638,7 @@
   },
   {
     "command": "workbench.action.gotoSymbol",
-    "key": "ctrl+d ctrl+o",
+    "key": "ctrl+s ctrl+o",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown && !terminalFocus"
   },
   {
@@ -756,8 +756,8 @@
   },
   {
     "command": "workbench.action.switchWindow",
-    "key": "ctrl+d ctrl+s",
-    "when": " !terminalFocus"
+    "key": "ctrl+s ctrl+w",
+    "when": "!terminalFocus"
   },
   {
     "command": "workbench.action.terminal.new",
@@ -781,7 +781,7 @@
   },
   {
     "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl+d ctrl+d",
+    "key": "ctrl+s ctrl+d",
     "when": "editorFocus && !terminalFocus"
   },
   {
@@ -791,7 +791,7 @@
   },
   {
     "command": "references-view.findReferences",
-    "key": "ctrl+d ctrl+r",
+    "key": "ctrl+s ctrl+r",
     "when": "editorHasReferenceProvider && !terminalFocus"
   },
   {
@@ -803,5 +803,47 @@
     "key": "backspace",
     "command": "-extension.vim_backspace",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+s ctrl+l",
+    "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "list.focusPageDown",
+    "when": "listFocus && !inputFocus && !terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-list.focusPageDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+s ctrl+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+shift+1",
+    "command": "workbench.action.firstEditorInGroup"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
   }
 ]
