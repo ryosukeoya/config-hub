@@ -150,7 +150,7 @@ alias hu='hugo'
 alias hus='hugo server'
 alias pks='pkgsite -open .'
 alias prec="h -n 1 | cut -c 8- | sed -e 's/\n/ /g' C"
-alias h='history 0 | tail -n 40'
+alias h='history 0 | tail -n 80'
 alias x='xsel --clipboard --input'
 alias re='exec $SHELL -l'
 
@@ -168,8 +168,15 @@ alias gcow='code $(find /home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/wor
 alias pc='find /home/ryo/ghq/github.com/ryosukeoya/prompt -maxdepth 1 -type f | peco | xargs cat C'
 alias ga='code --add $(ghq list -p | peco)'
 alias gcp='ghq list -p | peco C'
-alias gb='gh browse --repo $(ghq list | peco)'
+alias gbr='gh browse --repo $(ghq list | peco)'
+alias gb='gh browse'
 alias tagv="git for-each-ref --sort=-taggerdate --format '%(refname:short) %(taggerdate:short) %(taggername) %(subject)' refs/tags | less"
+alias ggr="git log --oneline --decorate --graph --branches --tags --remotes"
+alias ilist="gh issue list --state open --assignee ryosukeoya"
+alias plist="gh pr list --state open --assignee ryosukeoya"
+alias pp='cat $(find /home/ryo/ghq/github.com/baleen-studio/ryosukeoya/prompt -maxdepth 1 | peco)'
+# Plusmedi
+alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
 alias tools="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools"
 
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
@@ -210,11 +217,11 @@ export EDITOR=nvim
 
 # Go
 GO_VERSION=go1.23.0
-export GOROOT=$(${GO_VERSION} env GOROOT)
 export GOPATH="${HOME}/go"
+alias go="${GOPATH}/bin/${GO_VERSION}"
+export GOROOT=$(go env GOROOT)
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
 export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosukeoya
-alias go="${GOPATH}/bin/${GO_VERSION}"
 
 # Project毎にinstall
 # go env -w GOBIN="$PWD/tmp/bin"
@@ -254,3 +261,6 @@ function search-history() {
 
 zle -N search-history
 bindkey "^Xh" search-history
+
+export PATH="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools/cmd:$PATH"
+alias rw='rename-gowork.sh'
