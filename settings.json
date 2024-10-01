@@ -28,7 +28,8 @@
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "files.insertFinalNewline": false
+    "files.insertFinalNewline": false,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[mk]": {
     "editor.indentSize": "tabSize",
@@ -64,11 +65,22 @@
     },
     "editor.tabSize": 2
   },
-  "cSpell.enabled": true,
+  "go.coverageDecorator": {
+    "type": "highlight",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredBorderColor": "rgba(64,128,128,0.5)",
+    "uncoveredBorderColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "blockblue",
+    "uncoveredGutterStyle": "slashyellow"
+  },
+  "go.coverOnSave": true,
+  "go.coverOnSingleTest": true,
+  "go.coverOnTestPackage": true,
   "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
   "css.customData": ["./.vscode/custom.css-data.json"],
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "mtxr.sqltools",
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.quickSuggestions": {
@@ -250,5 +262,9 @@
   "yaml.format.enable": true,
   "dotenv.enableAutocloaking": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
-  "markdown-preview-github-styles.darkTheme": "light"
+  "markdown-preview-github-styles.darkTheme": "light",
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
+  "cSpell.enabled": true
 }
