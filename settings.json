@@ -77,8 +77,15 @@
   "go.coverOnSave": true,
   "go.coverOnSingleTest": true,
   "go.coverOnTestPackage": true,
-  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
-  "css.customData": ["./.vscode/custom.css-data.json"],
+  "cSpell.ignoreWords": [
+    "ryosuke",
+    "neovim",
+    "nvim",
+    "protoc"
+  ],
+  "css.customData": [
+    "./.vscode/custom.css-data.json"
+  ],
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.defaultFormatter": "mtxr.sqltools",
   "editor.formatOnPaste": true,
@@ -138,7 +145,10 @@
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.remotes.files.layout": "list",
   "go.formatTool": "gofmt",
-  "go.lintFlags": ["--fast", "--config=${workspaceFolder}/.golangci.yml"],
+  "go.lintFlags": [
+    "--fast",
+    "--config=${workspaceFolder}/.golangci.yml"
+  ],
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.playground": {
@@ -236,10 +246,24 @@
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.maxLineCount": 5,
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
-  "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*"
+  ],
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIX",
+    "FIXME",
+    "MUST",
+    "MUST_NOT",
+    "SHOULD",
+    "SHOULD_NOT",
+    "ASK_TO",
+    "REMOVE_ME"
+  ],
   "todo-tree.highlights.enabled": false,
-  "trailing-spaces.syntaxIgnore": ["markdown"],
+  "trailing-spaces.syntaxIgnore": [
+    "markdown"
+  ],
   "typescript.preferences.quoteStyle": "single",
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -254,7 +278,8 @@
     "tab.activeBorder": "#63c3dd",
     "tab.selectedBackground": "#63c3dd15",
     "terminal.findMatchBackground": "#2b2700ec",
-    "terminal.findMatchBorder": "#7b700dec"
+    "terminal.findMatchBorder": "#7b700dec",
+    "editor.lineHighlightBackground": "#161926",
   },
   "workbench.colorTheme": "Material Theme Ocean",
   "workbench.iconTheme": "material-icon-theme",
@@ -266,5 +291,8 @@
   "[sql]": {
     "editor.defaultFormatter": "mtxr.sqltools"
   },
-  "cSpell.enabled": true
+  "cSpell.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }
