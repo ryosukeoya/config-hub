@@ -286,13 +286,15 @@
   "workbench.tree.enableStickyScroll": true,
   "yaml.format.enable": true,
   "dotenv.enableAutocloaking": false,
-  "diffEditor.hideUnchangedRegions.enabled": true,
   "markdown-preview-github-styles.darkTheme": "light",
   "[sql]": {
     "editor.defaultFormatter": "mtxr.sqltools"
   },
-  "cSpell.enabled": false,
+  "cSpell.enabled": true,
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "editor.fontSize": 12,
+  "window.zoomLevel": -1
 }
