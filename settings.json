@@ -17,6 +17,9 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
   "[makefile]": {
     "editor.indentSize": "tabSize",
     "editor.insertSpaces": false,
@@ -26,10 +29,10 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
     },
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "files.insertFinalNewline": false,
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "files.insertFinalNewline": false
   },
   "[mk]": {
     "editor.indentSize": "tabSize",
@@ -53,6 +56,9 @@
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay"
   },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools"
+  },
   "[yaml]": {
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.autoIndent": "keep",
@@ -65,12 +71,7 @@
     },
     "editor.tabSize": 2
   },
-  "go.coverageDecorator": {
-    "type": "gutter"
-  },
-  "go.coverOnSave": true,
-  "go.coverOnSingleTest": true,
-  "go.coverOnTestPackage": true,
+  "cSpell.enabled": true,
   "cSpell.ignoreWords": [
     "ryosuke",
     "neovim",
@@ -80,8 +81,11 @@
   "css.customData": [
     "./.vscode/custom.css-data.json"
   ],
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "dotenv.enableAutocloaking": false,
   "editor.defaultFormatter": "mtxr.sqltools",
+  "editor.fontSize": 12,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.quickSuggestions": {
@@ -131,6 +135,7 @@
       "query": "state:open repo:${owner}/${repository} sort:updated-desc"
     }
   ],
+  "githubPullRequests.commentExpandState": "collapseAll",
   "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullBranch": "never",
   "gitlens.ai.experimental.model": "openai:gpt-4o",
@@ -138,6 +143,12 @@
   "gitlens.views.commits.files.layout": "list",
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.remotes.files.layout": "list",
+  "go.coverOnSave": true,
+  "go.coverOnSingleTest": true,
+  "go.coverOnTestPackage": true,
+  "go.coverageDecorator": {
+    "type": "gutter"
+  },
   "go.formatTool": "gofmt",
   "go.lintFlags": [
     "--fast",
@@ -218,6 +229,7 @@
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown-mermaid.darkModeTheme": "base",
+  "markdown-preview-github-styles.darkTheme": "light",
   "markdownlint.config": {
     "MD024": false,
     "MD036": false,
@@ -231,11 +243,12 @@
   "prettier.jsxSingleQuote": true,
   "prettier.printWidth": 200,
   "prettier.singleQuote": true,
-  "remote.autoForwardPortsSource": "hybrid",
   "remote.WSL.debug": false,
   "remote.WSL.useShellEnvironment": true,
+  "remote.autoForwardPortsSource": "hybrid",
   "security.workspace.trust.enabled": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
+  "svg.preview.autoShow": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
@@ -264,31 +277,20 @@
   "vim.useSystemClipboard": true,
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowProfile": "Default",
+  "window.zoomLevel": -1,
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#63c3dd",
+    "editor.lineHighlightBackground": "#161926",
     "editorStickyScroll.background": "#0a1a2ec1",
     "panel.border": "#bbbbbb0d",
     "panelTitle.activeBorder": "#63c3dd",
     "tab.activeBorder": "#63c3dd",
     "tab.selectedBackground": "#63c3dd15",
     "terminal.findMatchBackground": "#2b2700ec",
-    "terminal.findMatchBorder": "#7b700dec",
-    "editor.lineHighlightBackground": "#161926",
+    "terminal.findMatchBorder": "#7b700dec"
   },
   "workbench.colorTheme": "Material Theme Ocean",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.enableStickyScroll": true,
-  "yaml.format.enable": true,
-  "dotenv.enableAutocloaking": false,
-  "markdown-preview-github-styles.darkTheme": "light",
-  "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
-  },
-  "cSpell.enabled": true,
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "editor.fontSize": 12,
-  "window.zoomLevel": -1
+  "yaml.format.enable": true
 }
