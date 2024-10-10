@@ -180,6 +180,8 @@ alias pp='cat $(find /home/ryo/ghq/github.com/baleen-studio/ryosukeoya/prompt -m
 alias lbd='git branch | xargs git branch -d'
 alias cover='go tool cover -html=/tmp/vscode-gowctahn/go-code-cover -o cover-vs.html'
 alias migf='date +%Y%m%d%H%M%S'
+alias ct='go-cover-treemap'
+alias ctp='go-cover-treemap -coverprofile cover.out > out.svg && code out.svg'
 
 # Plusmedi
 alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
