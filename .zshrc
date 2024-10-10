@@ -170,12 +170,17 @@ alias ga='code --add $(ghq list -p | peco)'
 alias gcp='ghq list -p | peco C'
 alias gbr='gh browse --repo $(ghq list | peco)'
 alias gb='gh browse'
-alias cb="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -d"
+alias cb="git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -D"
+alias refl="git for-each-ref --sort=-creatordate --format='%(creatordate:short) %(refname:short)' refs/heads/"
 alias tagv="git for-each-ref --sort=-taggerdate --format '%(refname:short) %(taggerdate:short) %(taggername) %(subject)' refs/tags | less"
 alias ggr="git log --oneline --decorate --graph --branches --tags --remotes"
 alias ilist="gh issue list --state open --assignee ryosukeoya"
 alias plist="gh pr list --state open --assignee ryosukeoya"
 alias pp='cat $(find /home/ryo/ghq/github.com/baleen-studio/ryosukeoya/prompt -maxdepth 1 | peco)'
+alias lbd='git branch | xargs git branch -d'
+alias cover='go tool cover -html=/tmp/vscode-gowctahn/go-code-cover -o cover-vs.html'
+alias migf='date +%Y%m%d%H%M%S'
+
 # Plusmedi
 alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
 alias tools="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools"
