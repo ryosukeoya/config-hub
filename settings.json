@@ -113,6 +113,9 @@
       }
     ]
   },
+  "errorLens.excludeBySource": [
+    "cSpell"
+  ],
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.envrc.*": "dotenv",
@@ -249,6 +252,7 @@
   "security.workspace.trust.enabled": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
   "svg.preview.autoShow": true,
+  "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
