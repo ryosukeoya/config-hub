@@ -66,13 +66,7 @@
     "editor.tabSize": 2
   },
   "go.coverageDecorator": {
-    "type": "highlight",
-    "coveredHighlightColor": "rgba(64,128,128,0.05)",
-    "coveredBorderColor": "rgba(64,128,128,0.2)",
-    "uncoveredHighlightColor": "rgba(255, 230, 128,0.08)",
-    "uncoveredBorderColor": "rgba(255, 230, 128,0.1)",
-    "coveredGutterStyle": "blockblue",
-    "uncoveredGutterStyle": "slashyellow"
+    "type": "gutter"
   },
   "go.coverOnSave": true,
   "go.coverOnSingleTest": true,
