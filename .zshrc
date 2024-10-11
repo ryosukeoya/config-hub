@@ -76,11 +76,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%3~%{$reset_color%}"
-PROMPT+=' $(git_prompt_info)'
+PROMPT='%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[yellow]%}%1{➜%}) %{$fg_bold[red]%}$(git_prompt_info) %{$fg[cyan]%}%3~%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%} %{$fg[red]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}  "
+# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}  "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%} %{$fg[yellow]%}%1{✗%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
 
@@ -181,7 +180,8 @@ alias lbd='git branch | xargs git branch -d'
 alias cover='go tool cover -html=/tmp/vscode-gowctahn/go-code-cover -o cover-vs.html'
 alias migf='date +%Y%m%d%H%M%S'
 alias ct='go-cover-treemap'
-alias ctp='go-cover-treemap -coverprofile cover.out > out.svg && code out.svg'
+alias ctp='go-cover-treemap -coverprofile cover.out > my_out.svg && code my_out.svg'
+alias addws='ls | xargs code --add'
 
 # Plusmedi
 alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
@@ -237,7 +237,7 @@ export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosuke
 # export PATH="$PWD/tmp/bin:$PATH"
 
 # VSCode
-[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+# [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
 function sadd {
   eval $(ssh-agent)
