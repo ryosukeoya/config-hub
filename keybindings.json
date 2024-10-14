@@ -233,10 +233,6 @@
     "key": "ctrl+k ctrl+oem_5"
   },
   {
-    "command": "workbench.action.splitEditorRight",
-    "key": "ctrl+k ctrl+l"
-  },
-  {
     "command": "markdown.showPreviewToSide",
     "key": "ctrl+k ctrl+v",
     "when": "!notebookEditorFocused && editorLangId == 'markdown'"
@@ -387,7 +383,7 @@
       ]
     },
     "command": "toggle",
-    "key": "ctrl+s ctrl+p",
+    "key": "ctrl+q ctrl+p",
     "when": "editorTextFocus && !terminalFocus"
   },
   {
@@ -587,10 +583,6 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "workbench.action.splitEditorToRightGroup",
-    "key": "ctrl+k ctrl+l"
-  },
-  {
     "command": "selectPrevSuggestion",
     "key": "ctrl+p",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
@@ -638,7 +630,7 @@
   },
   {
     "command": "workbench.action.gotoSymbol",
-    "key": "ctrl+s ctrl+o",
+    "key": "ctrl+q ctrl+o",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown && !terminalFocus"
   },
   {
@@ -756,7 +748,7 @@
   },
   {
     "command": "workbench.action.switchWindow",
-    "key": "ctrl+s ctrl+w",
+    "key": "ctrl+q ctrl+w",
     "when": "!terminalFocus"
   },
   {
@@ -781,7 +773,7 @@
   },
   {
     "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl+s ctrl+d",
+    "key": "ctrl+q ctrl+d",
     "when": "editorFocus && !terminalFocus"
   },
   {
@@ -791,7 +783,7 @@
   },
   {
     "command": "references-view.findReferences",
-    "key": "ctrl+s ctrl+r",
+    "key": "ctrl+q ctrl+r",
     "when": "editorHasReferenceProvider && !terminalFocus"
   },
   {
@@ -805,7 +797,7 @@
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {
-    "key": "ctrl+s ctrl+l",
+    "key": "ctrl+q ctrl+l",
     "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
   },
   {
@@ -819,7 +811,7 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+s ctrl+s",
+    "key": "ctrl+s",
     "command": "workbench.action.files.save"
   },
   {
@@ -855,5 +847,31 @@
     "key": "alt+left",
     "command": "-workbench.action.navigateBack",
     "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+h",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "ctrl+q ctrl+s",
+    "command": "markdown.extension.editing.toggleStrikethrough",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "alt+s",
+    "command": "-markdown.extension.editing.toggleStrikethrough",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   }
 ]
