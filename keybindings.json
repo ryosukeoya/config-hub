@@ -839,7 +839,7 @@
     "command": "-workbench.action.focusSecondEditorGroup"
   },
   {
-    "key": "alt+oem_1",
+    "key": "ctrl+8",
     "command": "workbench.action.navigateBack",
     "when": "canNavigateBack"
   },
@@ -873,5 +873,13 @@
     "key": "alt+s",
     "command": "-markdown.extension.editing.toggleStrikethrough",
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "ctrl+q ctrl+oem_7",
+    "command": "workbench.action.positionPanelRight"
+  },
+  {
+    "key": "ctrl+q ctrl+oem_1",
+    "command": "workbench.action.positionPanelBottom"
   }
 ]
