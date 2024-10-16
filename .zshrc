@@ -186,6 +186,14 @@ alias addws='ls | xargs code --add'
 # Plusmedi
 alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
 alias tools="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools"
+# マージコミットを確認する
+# git log --merges --oneline patient/v1.10.2..patient/v1.13.0
+# 指定した文字列でフィルター
+# git log --merges moc/schedule/v0.1.0..HEAD --grep="schedule" --pretty=format:"%h - %s"
+
+# 差分を確認する
+# git diff --name-only --diff-filter=AMCRD tag1 tag2
+# git diff tag1 tag2
 
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 alias explorer='/mnt/c/Windows/explorer.exe'
@@ -226,6 +234,7 @@ export EDITOR=nvim
 # Go
 GO_VERSION=go1.23.0
 export GOPATH="${HOME}/go"
+export GOBIN="${GOPATH}/bin"
 alias go="${GOPATH}/bin/${GO_VERSION}"
 export GOROOT=$(go env GOROOT)
 export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
