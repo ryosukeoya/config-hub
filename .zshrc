@@ -282,3 +282,14 @@ bindkey "^Xh" search-history
 
 export PATH="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools/cmd:$PATH"
 alias rw='rename-gowork.sh'
+
+# source <(fzf --zsh)
+export FZF_DEFAULT_OPTS='
+  --color=fg:#D8DEE9,fg+:#eeeeee,hl:#800080,hl+:#800080,bg+:#b673ec,marker:#E17899
+  --color=marker:#ffffff,spinner:#4C566A,header:#4C566A,gutter:-1
+  --color=info:#d4d429,prompt:#800080,pointer:#c2fc8f
+  --layout="reverse"
+  --prompt=" | "
+  --marker=" >"
+  --pointer=" >"
+'
