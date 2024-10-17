@@ -260,8 +260,9 @@ eval "$(pyenv init -)"
 
 # Functions
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/copy-tag.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/month.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/z-push.sh
 
