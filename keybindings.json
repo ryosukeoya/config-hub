@@ -383,7 +383,7 @@
       ]
     },
     "command": "toggle",
-    "key": "ctrl+q ctrl+p",
+    "key": "ctrl+e ctrl+p",
     "when": "editorTextFocus && !terminalFocus"
   },
   {
@@ -458,7 +458,7 @@
   },
   {
     "command": "workbench.action.terminal.focusFind",
-    "key": "ctrl+alt+f",
+    "key": "ctrl+k ctrl+f",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
   },
   {
@@ -630,7 +630,7 @@
   },
   {
     "command": "workbench.action.gotoSymbol",
-    "key": "ctrl+q ctrl+o",
+    "key": "ctrl+e ctrl+o",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown && !terminalFocus"
   },
   {
@@ -748,7 +748,7 @@
   },
   {
     "command": "workbench.action.switchWindow",
-    "key": "ctrl+q ctrl+w",
+    "key": "ctrl+e ctrl+w",
     "when": "!terminalFocus"
   },
   {
@@ -773,7 +773,7 @@
   },
   {
     "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl+q ctrl+d",
+    "key": "ctrl+e ctrl+d",
     "when": "editorFocus && !terminalFocus"
   },
   {
@@ -783,7 +783,7 @@
   },
   {
     "command": "references-view.findReferences",
-    "key": "ctrl+q ctrl+r",
+    "key": "ctrl+e ctrl+r",
     "when": "editorHasReferenceProvider && !terminalFocus"
   },
   {
@@ -797,7 +797,7 @@
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {
-    "key": "ctrl+q ctrl+l",
+    "key": "ctrl+e ctrl+l",
     "command": "workbench.action.quickOpenLeastRecentlyUsedEditor"
   },
   {
@@ -865,7 +865,7 @@
     "command": "workbench.action.moveEditorToAboveGroup"
   },
   {
-    "key": "ctrl+q ctrl+s",
+    "key": "ctrl+e ctrl+f",
     "command": "markdown.extension.editing.toggleStrikethrough",
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
@@ -875,11 +875,31 @@
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
-    "key": "ctrl+q ctrl+oem_7",
+    "key": "ctrl+e ctrl+oem_7",
     "command": "workbench.action.positionPanelRight"
   },
   {
-    "key": "ctrl+q ctrl+oem_1",
+    "key": "ctrl+e ctrl+oem_1",
     "command": "workbench.action.positionPanelBottom"
+  },
+  {
+    "key": "ctrl+k ctrl+u",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "tab",
+    "command": "extension.vim_tab",
+    "when": "!terminalFocus && editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
   }
 ]

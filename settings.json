@@ -71,7 +71,7 @@
     },
     "editor.tabSize": 2
   },
-  "cSpell.enabled": true,
+  "cSpell.enabled": false,
   "cSpell.ignoreWords": [
     "ryosuke",
     "neovim",
@@ -118,7 +118,6 @@
   ],
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
-    "*.envrc.*": "dotenv",
     "*.mk": "makefile",
     ".env*": "dotenv"
   },
@@ -164,6 +163,7 @@
     "run": true,
     "share": false
   },
+  "go.toolsManagement.autoUpdate": true,
   "gopls": {
     "formatting.gofumpt": true
   },
@@ -239,8 +239,8 @@
     "MD041": false
   },
   "material-icon-theme.files.associations": {
-    ".envrc": "android",
-    ".envrc.local": "android"
+    ".envrc": "Pug",
+    ".envrc.local": "Pug"
   },
   "material-icon-theme.files.color": "#90a4ae",
   "prettier.jsxSingleQuote": true,
@@ -254,6 +254,7 @@
   "svg.preview.autoShow": true,
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.maxLineCount": 5,
@@ -296,5 +297,7 @@
   "workbench.colorTheme": "Material Theme Ocean",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.enableStickyScroll": true,
-  "yaml.format.enable": true
+  "yaml.format.enable": true,
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.activeIconPack": "react"
 }
