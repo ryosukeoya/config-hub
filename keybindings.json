@@ -631,7 +631,7 @@
   {
     "command": "workbench.action.gotoSymbol",
     "key": "ctrl+e ctrl+o",
-    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+    "when": "!accessibilityHelpIsShown && !accessibleViewIsShown && !terminalFocus"
   },
   {
     "command": "-workbench.action.gotoSymbol",
