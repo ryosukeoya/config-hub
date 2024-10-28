@@ -12,8 +12,8 @@ trap cleanup EXIT ERR
 
 repos=(
   "/home/ryo/ghq/github.com/plusmedi/mhv2-app"
-  "/home/ryo/ghq/github.com/plusmedi/mhv2-app-api"
   "/home/ryo/ghq/github.com/plusmedi/mhv2-app-docs"
+  "/home/ryo/ghq/github.com/plusmedi/mhv2-app-api"
   "/home/ryo/ghq/github.com/plusmedi/c6o-poc-bff"
   "/home/ryo/ghq/github.com/plusmedi/mhv2-api-specs"
   "/home/ryo/ghq/github.com/plusmedi/mhv2-backend-docs"
