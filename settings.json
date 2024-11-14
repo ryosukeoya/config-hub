@@ -72,15 +72,8 @@
     "editor.tabSize": 2
   },
   "cSpell.enabled": false,
-  "cSpell.ignoreWords": [
-    "ryosuke",
-    "neovim",
-    "nvim",
-    "protoc"
-  ],
-  "css.customData": [
-    "./.vscode/custom.css-data.json"
-  ],
+  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
+  "css.customData": ["./.vscode/custom.css-data.json"],
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "dotenv.enableAutocloaking": false,
@@ -113,9 +106,7 @@
       }
     ]
   },
-  "errorLens.excludeBySource": [
-    "cSpell"
-  ],
+  "errorLens.excludeBySource": ["cSpell"],
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.mk": "makefile",
@@ -145,17 +136,13 @@
   "gitlens.views.commits.files.layout": "list",
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.remotes.files.layout": "list",
+  "go.testFlags": ["-v"],
   "go.coverOnSave": true,
-  "go.coverOnSingleTest": true,
-  "go.coverOnTestPackage": true,
   "go.coverageDecorator": {
     "type": "gutter"
   },
   "go.formatTool": "gofmt",
-  "go.lintFlags": [
-    "--fast",
-    "--config=${fileWorkspaceFolder}/.golangci.yml"
-  ],
+  "go.lintFlags": ["--fast", "--config=${fileWorkspaceFolder}/.golangci.yml"],
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.playground": {
@@ -214,7 +201,7 @@
       ],
       "filterFileRegex": ".*(?<!CHANGELOG.md)$"
     },
-    "((?:<!-- *)?(?:#{1,6}|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+    "((?:<!-- *)?(?:#{1,6}|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO|QUESTION)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "decorations": [
         {
           "color": "#fff41a",
@@ -258,24 +245,10 @@
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.maxLineCount": 5,
-  "todo-tree.filtering.excludeGlobs": [
-    "**/node_modules/*"
-  ],
-  "todo-tree.general.tags": [
-    "TODO",
-    "FIX",
-    "FIXME",
-    "MUST",
-    "MUST_NOT",
-    "SHOULD",
-    "SHOULD_NOT",
-    "ASK_TO",
-    "REMOVE_ME"
-  ],
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "todo-tree.general.tags": ["TODO", "FIX", "FIXME", "MUST", "MUST_NOT", "SHOULD", "SHOULD_NOT", "ASK_TO", "REMOVE_ME"],
   "todo-tree.highlights.enabled": false,
-  "trailing-spaces.syntaxIgnore": [
-    "markdown"
-  ],
+  "trailing-spaces.syntaxIgnore": ["markdown"],
   "typescript.preferences.quoteStyle": "single",
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",

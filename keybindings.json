@@ -179,7 +179,8 @@
   },
   {
     "command": "workbench.action.toggleMaximizedPanel",
-    "key": "ctrl+k ctrl+m"
+    "key": "ctrl+k ctrl+m",
+    "when": "terminalFocus"
   },
   {
     "command": "-git.revertSelectedRanges",
@@ -871,14 +872,12 @@
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/ |!terminalFocus"
   },
   {
-    "key": "ctrl+e ctrl+oem_7",
-    "command": "workbench.action.positionPanelRight",
-    "when": "!terminalFocus"
+    "key": "ctrl+e ctrl+l",
+    "command": "workbench.action.positionPanelRight"
   },
   {
-    "key": "ctrl+e ctrl+oem_1",
-    "command": "workbench.action.positionPanelBottom",
-    "when": "!terminalFocus"
+    "key": "ctrl+e ctrl+j",
+    "command": "workbench.action.positionPanelBottom"
   },
   {
     "key": "ctrl+k ctrl+u",
@@ -1013,5 +1012,33 @@
     "key": "ctrl+e",
     "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
     "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+e ctrl+f",
+    "command": "markdown.extension.editing.toggleStrikethrough",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+e ctrl+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+oem_6",
+    "command": "-markdown.extension.editing.toggleHeadingUp",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "ctrl+e ctrl+h",
+    "command": "workbench.action.positionPanelLeft"
+  },
+  {
+    "key": "ctrl+e ctrl+k",
+    "command": "workbench.action.positionPanelTop"
   }
 ]
