@@ -20,6 +20,7 @@ repos=(
   "/home/ryo/ghq/github.com/plusmedi/mhv2-backends"
   "/home/ryo/ghq/github.com/plusmedi/mhv2-infra"
   "/home/ryo/ghq/github.com/plusmedi/mhv2-admin"
+  "/home/ryo/ghq/github.com/plusmedi/myhospital-backends"
 )
 
 for repo in "${repos[@]}"; do
