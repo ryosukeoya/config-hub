@@ -235,8 +235,8 @@
   },
   {
     "command": "markdown.showPreviewToSide",
-    "key": "ctrl+k ctrl+v",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    "key": "ctrl+e ctrl+v",
+    "when": "!notebookEditorFocused && !terminalFocus && editorLangId == 'markdown' && !terminalFocus"
   },
   {
     "command": "-markdown.showPreviewToSide",
@@ -873,11 +873,13 @@
   },
   {
     "key": "ctrl+e ctrl+l",
-    "command": "workbench.action.positionPanelRight"
+    "command": "workbench.action.positionPanelRight",
+    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+e ctrl+j",
-    "command": "workbench.action.positionPanelBottom"
+    "command": "workbench.action.positionPanelBottom",
+    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+k ctrl+u",
@@ -1021,12 +1023,12 @@
   {
     "key": "ctrl+e ctrl+v",
     "command": "markdown.showPreviewToSide",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    "when": "!notebookEditorFocused && editorLangId == 'markdown' && !terminalFocus"
   },
   {
     "key": "ctrl+e ctrl+v",
     "command": "markdown.showPreviewToSide",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    "when": "!notebookEditorFocused && !terminalFocus && editorLangId == 'markdown'"
   },
   {
     "key": "ctrl+shift+oem_6",
@@ -1035,10 +1037,17 @@
   },
   {
     "key": "ctrl+e ctrl+h",
-    "command": "workbench.action.positionPanelLeft"
+    "command": "workbench.action.positionPanelLeft",
+    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+e ctrl+k",
-    "command": "workbench.action.positionPanelTop"
+    "command": "workbench.action.positionPanelTop",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
   }
 ]
