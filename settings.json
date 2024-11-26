@@ -57,7 +57,8 @@
     "files.autoSave": "afterDelay"
   },
   "[sql]": {
-    "editor.defaultFormatter": "mtxr.sqltools"
+    "editor.defaultFormatter": "mtxr.sqltools",
+    "editor.insertSpaces": true,
   },
   "[yaml]": {
     "diffEditor.ignoreTrimWhitespace": false,
@@ -119,7 +120,8 @@
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.mk": "makefile",
-    ".env*": "dotenv"
+    ".env*": "dotenv",
+    "*.json": "jsonc"
   },
   "files.autoSave": "afterDelay",
   "git.confirmSync": false,
