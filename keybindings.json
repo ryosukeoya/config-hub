@@ -640,11 +640,6 @@
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
   },
   {
-    "command": "extension.vim_ctrl+c",
-    "key": "ctrl+c",
-    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
-  },
-  {
     "command": "-extension.vim_ctrl+c",
     "key": "ctrl+c",
     "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
@@ -1053,6 +1048,11 @@
   {
     "key": "ctrl+l",
     "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.terminal.sendSequence",
     "when": "terminalFocus"
   }
 ]
