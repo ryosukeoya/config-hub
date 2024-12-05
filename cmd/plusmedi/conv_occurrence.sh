@@ -1,40 +1,46 @@
 #! /usr/bin/env bash
 
+set -euo pipefail
+
 if [ "$#" -lt 3 ]; then
-    echo "Usage: $0 <file_base_name> <operation> <option>"
+    echo "Usage: $0 <operation> <path> <option>"
     echo "Operations: dateTime | timing" >&2
 fi
 
 operation="$1"
-file_base_name="$2"
+path="$2"
+file_base_name=$(basename "${path}" .json)
+file_name=${file_base_name}.json
 option="$3"
 
-file_name=${file_base_name}.json
-new_file_name=""
+output=""
 
 case $option in
 # override
 "o")
-    new_file_name=${file_name}
+    output=${file_name}
+    ;;
+"tmp")
+    output=tmp/${file_name}
     ;;
 *)
     timestamp=$(date +"%Y%m%d_%H%M%S")
-    new_file_name=${file_base_name}_${timestamp}.json
+    output=${file_base_name}_${timestamp}.json
     ;;
 esac
 
-jq . "${file_name}"
+jq . "${path}"
 
 case "$operation" in
 timing)
     jq '.timing.event[0] = (.Occurrence.Timing.event[0].seconds | todate) |
     .timing.text = (.Occurrence.Timing.text) |
     del(.Occurrence)' \
-        "${file_name}" >tmp.json && mv tmp.json "${new_file_name}"
+        "${path}" >tmp.json && mv tmp.json "${output}"
     ;;
 dateTime)
     jq '.dateTime = (.Occurrence.DateTime.seconds | todate) | del(.Occurrence)' \
-        "${file_name}" >tmp.json && mv tmp.json "${new_file_name}"
+        "${path}" >tmp.json && mv tmp.json "${output}"
     ;;
 *)
     echo "Invalid operation: $operation"
@@ -42,7 +48,7 @@ dateTime)
     ;;
 esac
 
-jq '.ibpf_key.timestamp = (.ibpf_key.timestamp.seconds | todate)' "${new_file_name}" >tmp.json && mv tmp.json "${new_file_name}"
-jq . "${new_file_name}"
+jq '.ibpf_key.timestamp = (.ibpf_key.timestamp.seconds | todate)' "${output}" >tmp.json && mv tmp.json "${output}"
+jq . "${output}"
 
-echo "Processing complete. Output file: ${new_file_name}"
+echo "Processing complete. Output file: ${output}"
