@@ -24,7 +24,7 @@ repos=(
 )
 
 for repo in "${repos[@]}"; do
-  cd "${repo}" || exit
+  cd "${repo}" || return
   origin_head=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
   git switch "${origin_head}"
   git pull origin "${origin_head}"
