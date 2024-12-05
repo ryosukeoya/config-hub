@@ -9,19 +9,20 @@ operation="$1"
 file_base_name="$2"
 
 timestamp=$(date +"%Y%m%d_%H%M%S")
+new_file_name=${file_base_name}_${timestamp}.json
 
 jq . "${file_base_name}.json"
 
 case "$operation" in
 timing)
-  jq '.timing.event = (.Occurrence.Timing.event[0].seconds | todate) | 
-    .timing.text = (.Occurrence.Timing.text) | 
+  jq '.timing.event = (.Occurrence.Timing.event[0].seconds | todate) |
+    .timing.text = (.Occurrence.Timing.text) |
     del(.Occurrence)' \
-    "${file_base_name}.json" >"${file_base_name}_${timestamp}.json"
+    "${file_base_name}.json" >"${new_file_name}"
   ;;
 dateTime)
   jq '.dateTime = (.Occurrence.DateTime.seconds | todate) | del(.Occurrence)' \
-  "${file_base_name}.json" >"${file_base_name}_${timestamp}.json"
+    "${file_base_name}.json" >"${new_file_name}"
   ;;
 *)
   echo "Invalid operation: $operation"
@@ -29,6 +30,7 @@ dateTime)
   ;;
 esac
 
-jq . "${file_base_name}_${timestamp}.json"
+jq '.ibpf_key.timestamp = (.ibpf_key.timestamp.seconds | todate)' "${new_file_name}" > tmp.json && mv tmp.json "${new_file_name}"
+jq . "${new_file_name}"
 
 echo "Processing complete. Output file: ${file_base_name}_${timestamp}.json"
