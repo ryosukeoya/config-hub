@@ -650,7 +650,7 @@
   },
   {
     "command": "toggleFindWholeWord",
-    "key": "alt+d",
+    "key": "alt+c",
     "when": "editorFocus"
   },
   {
@@ -1054,5 +1054,15 @@
     "key": "alt+w",
     "command": "workbench.action.terminal.sendSequence",
     "when": "terminalFocus"
+  },
+  {
+    "key": "alt+d",
+    "command": "toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "-toggleFindCaseSensitive",
+    "when": "editorFocus"
   }
 ]
