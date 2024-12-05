@@ -30,7 +30,7 @@ dateTime)
   ;;
 esac
 
-jq '.ibpf_key.timestamp = (.ibpf_key.timestamp.seconds | todate)' "${new_file_name}" > tmp.json && mv tmp.json "${new_file_name}"
+jq '.ibpf_key.timestamp = (.ibpf_key.timestamp.seconds | todate)' "${new_file_name}" >tmp.json && mv tmp.json "${new_file_name}"
 jq . "${new_file_name}"
 
-echo "Processing complete. Output file: ${file_base_name}_${timestamp}.json"
+echo "Processing complete. Output file: ${new_file_name}.json"
