@@ -10,12 +10,18 @@ file_base_name="$2"
 
 timestamp=$(date +"%Y%m%d_%H%M%S")
 
+jq . "${file_base_name}.json"
+
 case "$operation" in
 timing)
-  cat "${file_base_name}.json | jq '.timing.event = (.Occurrence.Timing.event[0].seconds | todate)' | jq '.timing.text = (.Occurrence.Timing.text)' | jq 'del(.Occurrence)' >'${file_base_name}_${timestamp}.json'"
+  jq '.timing.event = (.Occurrence.Timing.event[0].seconds | todate) | 
+    .timing.text = (.Occurrence.Timing.text) | 
+    del(.Occurrence)' \
+    "${file_base_name}.json" >"${file_base_name}_${timestamp}.json"
   ;;
 dateTime)
-  cat "${file_base_name}.json | jq '.dateTime = (.Occurrence.DateTime.seconds | todate)' >'${file_base_name}_${timestamp}.json'"
+  jq '.dateTime = (.Occurrence.DateTime.seconds | todate) | del(.Occurrence)' \
+  "${file_base_name}.json" >"${file_base_name}_${timestamp}.json"
   ;;
 *)
   echo "Invalid operation: $operation"
