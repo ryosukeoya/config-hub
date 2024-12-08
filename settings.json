@@ -302,5 +302,6 @@
   "workbench.tree.enableStickyScroll": true,
   "yaml.format.enable": true,
   "material-icon-theme.folders.theme": "specific",
-  "material-icon-theme.activeIconPack": "react"
+  "material-icon-theme.activeIconPack": "react",
+  "workbench.sideBar.location": "right"
 }
