@@ -57,7 +57,7 @@
   },
   {
     "command": "cursorUp",
-    "key": "ctrl+p",
+    "key": "ctrl+o",
     "when": "terminalFocus"
   },
   {
@@ -1011,7 +1011,7 @@
     "when": "inFilesPicker && inQuickOpen"
   },
   {
-    "key": "ctrl+e ctrl+f",
+    "key": "ctrl+e ctrl+r",
     "command": "markdown.extension.editing.toggleStrikethrough",
     "when": "!terminalFocus"
   },
@@ -1071,12 +1071,56 @@
   },
   {
     "key": "ctrl+j",
-    "command": "workbench.action.terminal.toggleTerminal",
-    "when": "terminal.active"
+    "command": "workbench.action.terminal.toggleTerminal"
   },
   {
     "key": "ctrl+oem_3",
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+e ctrl+f",
+    "command": "workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openLocalFile",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openLocalFile",
+    "when": "remoteFileDialogVisible"
   }
 ]
