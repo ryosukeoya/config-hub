@@ -7,12 +7,6 @@ fi
 
 cp ~/.zshrc "${PWD}"
 git add -f .zshrc
-
-if git diff --quiet; then
-  echo "no differences in the .zshrc file"
-  exit 1
-fi
-
 git commit -m 'upsert .zshrc'
 git push origin HEAD
 
