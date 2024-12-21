@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 diff_files=$(git diff --name-only HEAD)
 

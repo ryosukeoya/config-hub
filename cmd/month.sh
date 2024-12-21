@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 filename="$(date "+%Y-%m")"
+
 # c: Current Directory
 if [ "$1" = 'c' ]; then
   filename+="-$(basename "${PWD}")"
