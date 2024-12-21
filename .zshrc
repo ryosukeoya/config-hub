@@ -239,25 +239,7 @@ eval "$(direnv hook zsh)"
 # Commands
 export PATH_CMD="${HOME}/ghq/github.com/ryosukeoya/zsh/cmd"
 
-autoload -U ${PATH_CMD}/sadd.sh
-autoload -U ${PATH_CMD}/list-tag.sh
-autoload -U ${PATH_CMD}/copy-tag.sh
-autoload -U ${PATH_CMD}/copy-history.sh
-autoload -U ${PATH_CMD}/exec-history.sh
-autoload -U ${PATH_CMD}/copy-git-square-brackets.sh
-autoload -U ${PATH_CMD}/diff-name-only.sh
-autoload -U ${PATH_CMD}/diff-merge-commit.sh
-autoload -U ${PATH_CMD}/diff-merge-commit-with-format.sh
-autoload -U ${PATH_CMD}/show-diff-file.sh
-autoload -U ${PATH_CMD}/grep-text-in-gomod.sh
-autoload -U ${PATH_CMD}/sort-gomod-directives.sh
-autoload -U ${PATH_CMD}/all-github-browse.sh
-autoload -U ${PATH_CMD}/search_text.sh
-autoload -U ${PATH_CMD}/edit_issue.sh
-autoload -U ${PATH_CMD}/backup.sh
-autoload -U ${PATH_CMD}/month.sh
-autoload -U ${PATH_CMD}/push.sh
-autoload -U ${PATH_CMD}/today.sh
+autoload -U ${PATH_CMD}/*.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/z-push.sh
 
 # Python
