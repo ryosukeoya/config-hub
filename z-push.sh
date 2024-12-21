@@ -1,10 +1,5 @@
 #!/usr/bin/env bash
 
-if ! git diff --quiet; then
-  echo "git differences already exist"
-  exit 1
-fi
-
 cp ~/.zshrc "${PWD}"
 git add -f .zshrc
 git commit -m 'upsert .zshrc'
