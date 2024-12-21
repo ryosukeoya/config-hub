@@ -143,10 +143,10 @@ export FZF_DEFAULT_OPTS='
   --pointer=" >"
 '
 
-# Aliases
 export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
+# Aliases
 alias s='source'
 alias rm='rm -i'
 alias l='ls -l'
