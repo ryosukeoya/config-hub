@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if git diff --quiet; then
+if ! git diff --quiet; then
   echo "git differences already exist"
   exit 1
 fi
@@ -8,7 +8,7 @@ fi
 cp ~/.zshrc "${PWD}"
 git add .zshrc
 
-if ! git diff --quiet; then
+if git diff --quiet; then
   echo "no differences in the .zshrc file"
   exit 1
 fi
