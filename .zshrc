@@ -117,7 +117,7 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%}"
 # History
 export HISTFILE="${HOME}/.zsh_history"
 export HISTSIZE=200
-export SAVEHIST=1000
+export SAVEHIST=5000
 
 # Bindkey
 bindkey -e
@@ -126,7 +126,7 @@ bindkey -e
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
-bindkey '^p' history-beginning-search-backward-end
+bindkey '^o' history-beginning-search-backward-end
 bindkey '^n' history-beginning-search-forward-end
 
 # Aliases
@@ -186,6 +186,7 @@ alias addws='ls | xargs code --add'
 # Plusmedi
 alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
 alias tools="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools"
+alias copy_issue_full_path='ls /home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/issues | fzf | xargs realpath C'
 
 alias code='/mnt/c/Users/大屋諒恭/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code'
 alias explorer='/mnt/c/Windows/explorer.exe'
@@ -205,14 +206,15 @@ alias -g TR="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); print}'"
 alias -g TC="| awk '{gsub(/Error|FAIL/, \"\033[31m&\033[0m\"); gsub(/SETUP|RUN|CONT|PAUSE/, \"\033[36m&\033[0m\"); gsub(/+/, \"\033[32m&\033[0m\"); gsub(/-/, \"\033[35m&\033[0m\"); print}'"
 
 # Directory Hash
-hash -d s="${HOME}/source"
-hash -d sa="${HOME}/source/sandbox"
+hash -d z="${HOME}/.zshrc"
+hash -d s="${HOME}/ghq/github.com/baleen-studio/ryosukeoya/sandbox"
+hash -d S="${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya"
 hash -d n="${HOME}/source/note"
-hash -d gh="${HOME}/ghq/github.com"
+hash -d g="${HOME}/ghq/github.com"
 hash -d b="${HOME}/ghq/github.com/baleen-studio"
 hash -d p="${HOME}/ghq/github.com/plusmedi"
 hash -d r="${HOME}/ghq/github.com/ryosukeoya"
-hash -d z="${HOME}/ghq/github.com/ryosukeoya/zsh"
+hash -d Z="${HOME}/ghq/github.com/ryosukeoya/zsh"
 hash -d g="${HOME}/ghq/github.com/ryosukeoya/git"
 hash -d v="${HOME}/ghq/github.com/ryosukeoya/vscode"
 hash -d vs='/mnt/c/Users/大屋諒恭/AppData/Roaming/Code/User'
@@ -225,19 +227,20 @@ export PATH="${HOME}/.local/bin:${PATH}"
 export EDITOR=nvim
 
 # Go
-GO_VERSION=go1.23.0
-export GOPATH="${HOME}/go"
-export GOBIN="${GOPATH}/bin"
-alias go="${GOPATH}/bin/${GO_VERSION}"
-export GOROOT=$(go env GOROOT)
-export PATH="${GOPATH}/bin:${GOROOT}/bin:${PATH}"
+go_version=go1.23.0
+go_path_install_cmd_binary=${HOME}/go/bin
+go_path_release_binary=${HOME}/source/go/bin
+
+export PATH="${go_path_install_cmd_binary}:${go_path_release_binary}:${PATH}"
+ln -sf "${go_path_install_cmd_binary}/${go_version}" "${go_path_install_cmd_binary}/go"
+# バイナリからインストールしたgoはsourceディレクトリに置いてある
+ln -sf "${go_path_release_binary}/go1.23.3" "${go_path_release_binary}/go"
+
 export GOPRIVATE=github.com/baleen-studio,github.com/plusmedi,github.com/ryosukeoya
 
-# Project毎にinstall
-# go env -w GOBIN="$PWD/tmp/bin"
-# export GOBIN=$(go env GOBIN)
-# export PATH="$PWD/tmp/bin:$PATH"
-
+# エイリアスだと子プロセスに影響しないから辞めた
+# alias go="${go_version}"
+# ln -s "${HOME}/source/go/bin/go ${HOME}/source/go/bin/${go_version}"
 # VSCode
 # [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
 
@@ -252,6 +255,11 @@ export PYENV_ROOT="${HOME}/.pyenv"
 eval "$(pyenv init -)"
 
 # Functions
+# autoloadで読み込まれた関数は、現在のシェルセッション内で実行される
+# $PATHに追加されたスクリプトは、別のシェルインスタンスとして実行される
+export PATH=/home/ryo/ghq/github.com/ryosukeoya/zsh/cmd:/home/ryo/ghq/github.com/ryosukeoya/zsh/cmd/plusmedi:$PATH
+
+export CMD_PATH="${HOME}/ghq/github.com/ryosukeoya/zsh/cmd"
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/list-tag.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/copy-tag.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/copy-history.sh
@@ -263,9 +271,9 @@ autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/diff-merge-commit-with-for
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/show-diff-file.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/grep-text-in-gomod.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/sort-gomod-directives.sh
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/github-browse-all.sh
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/plusmedi/update-core-cli.sh
-autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/plusmedi/pull-all-repo.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/all-github-browse.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/search_text.sh
+autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/edit_issue.sh
 # g log --oneline --grep "^\[moc/schedule\]"
 
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/backup.sh
@@ -273,6 +281,11 @@ autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/month.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/push.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/today.sh
 autoload -U ${HOME}/ghq/github.com/ryosukeoya/zsh/z-push.sh
+
+# Pluemedi
+export PATH_PLUSMEDI_CMD="${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools/cmd"
+export PATH_PLUSMEDI_WORKSPACES="${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya/workspaces"
+export PATH="${CMD_PATH_PLUSMEDI}:${PATH}"
 
 # Node
 export VOLTA_HOME="$HOME/.volta"
@@ -288,7 +301,6 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 zle -N search-history
 bindkey "^Xh" search-history
 
-export PATH="/home/ryo/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools/cmd:$PATH"
 alias rw='rename-gowork.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -303,4 +315,11 @@ export FZF_DEFAULT_OPTS='
   --pointer=" >"
 '
 
+# flutter
 export PATH="${HOME}/development/flutter/bin:$PATH"
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export CHROME_EXECUTABLE="/mnt/c/Program\ Files/Google/Chrome/Application/chrome.exe"
