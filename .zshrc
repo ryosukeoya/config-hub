@@ -299,11 +299,9 @@ alias rlist="gh issue list --label release --repo plusmedi/mhv2-infra"
 alias tools="${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools"
 alias copy_issue_full_path='ls ${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya/issues | fzf | xargs realpath C'
 
+# autoloadで読み込まれた関数は、現在のシェルセッション内で実行される
+# PATHに追加されたスクリプトは、別のシェルインスタンスとして実行される
 export PATH_PLUSMEDI_CMD="${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya/tools/cmd"
 export PATH_PLUSMEDI_WORKSPACES="${HOME}/ghq/github.com/plusmedi/sandbox-ryosukeoya/workspaces"
-export PATH="${CMD_PATH_PLUSMEDI}:${PATH}"
 
-# autoloadで読み込まれた関数は、現在のシェルセッション内で実行される
-# $PATHに追加されたスクリプトは、別のシェルインスタンスとして実行される
-export PATH=${HOME}/ghq/github.com/ryosukeoya/zsh/cmd:$PATH
-export PATH=${HOME}/ghq/github.com/ryosukeoya/zsh/cmd/plusmedi:$PATH
+export PATH="${CMD_PATH_PLUSMEDI}:${PATH}"
