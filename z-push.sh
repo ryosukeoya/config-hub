@@ -6,7 +6,7 @@ if ! git diff --quiet; then
 fi
 
 cp ~/.zshrc "${PWD}"
-git add .zshrc
+git add -f .zshrc
 
 if git diff --quiet; then
   echo "no differences in the .zshrc file"
