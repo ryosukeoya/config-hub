@@ -6,3 +6,5 @@ find /home/ryo/ghq/github.com/plusmedi/mhv2-backends -name "go.mod" -type f -exe
 #     version=$2
 #     printf "%s %s\033[34m%s\033[0m\n", $1, "go", version
 # }'
+
+exit 0

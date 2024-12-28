@@ -13,3 +13,5 @@ ex='md'
 [ -n "$2" ] && ex="$2"
 
 touch "${filename}.${ex}"
+
+exit 0

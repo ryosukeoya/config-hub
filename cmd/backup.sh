@@ -4,3 +4,5 @@ backup_dir='/mnt/c/Users/大屋諒恭/OneDrive - Baleen Studio/ドキュメン�
 dir="$1"
 
 zip -r "${backup_dir}/${dir}/backup-$(date +'%Y-%m-%d').zip" ./*
+
+exit 0
