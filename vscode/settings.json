@@ -1,16 +1,4 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "editor.stickyScroll.defaultModel": "outlineModel",
-  "editor.stickyScroll.enabled": false,
-  "editor.tabSize": 2,
-  "editor.tokenColorCustomizations": {
-    "comments": "#9398a07a"
-  },
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
@@ -29,13 +17,27 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true
   },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[makefile]": {
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 8
+  },
   "[markdown]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.markdownlint": "explicit"
     },
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "files.insertFinalNewline": false
+  },
+  "[mk]": {
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 8
   },
   "[php]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -46,13 +48,17 @@
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": false,
-    "editor.formatontype": true
+    "editor.formatOnType": true
   },
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay"
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "mtxr.sqltools",
+    "editor.insertSpaces": true,
   },
   "[yaml]": {
     "diffEditor.ignoreTrimWhitespace": false,
@@ -66,10 +72,40 @@
     },
     "editor.tabSize": 2
   },
-  "cSpell.enabled": false,
-  "cSpell.ignoreWords": ["ryosuke", "neovim", "nvim", "protoc"],
-  "css.customData": ["./.vscode/custom.css-data.json"],
+  "cSpell.enabled": true,
+  "cSpell.ignoreWords": [
+    "ryosuke",
+    "neovim",
+    "nvim",
+    "protoc"
+  ],
+  "css.customData": [
+    "./.vscode/custom.css-data.json"
+  ],
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "dotenv.enableAutocloaking": false,
+  "editor.defaultFormatter": "mtxr.sqltools",
+  "editor.fontSize": 12,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.stickyScroll.defaultModel": "outlineModel",
+  "editor.stickyScroll.enabled": false,
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "comments": "#9398a07a",
+    "textMateRules": [
+      {
+        "scope": "markup.strikethrough",
+        "settings": {
+          "fontStyle": "strikethrough"
+        }
+      }
+    ]
+  },
   "emeraldwalk.runonsave": {
     "commands": [
       {
@@ -78,7 +114,15 @@
       }
     ]
   },
+  "errorLens.excludeBySource": [
+    "cSpell"
+  ],
   "explorer.confirmDragAndDrop": false,
+  "files.associations": {
+    "*.mk": "makefile",
+    ".env*": "dotenv",
+    "*.json": "jsonc"
+  },
   "files.autoSave": "afterDelay",
   "git.confirmSync": false,
   "githubIssues.queries": [
@@ -95,14 +139,26 @@
       "query": "state:open repo:${owner}/${repository} sort:updated-desc"
     }
   ],
+  "githubPullRequests.commentExpandState": "collapseAll",
   "githubPullRequests.fileListLayout": "flat",
   "githubPullRequests.pullBranch": "never",
+  "gitlens.ai.experimental.model": "openai:gpt-4o",
   "gitlens.views.branches.files.layout": "list",
   "gitlens.views.commits.files.layout": "list",
   "gitlens.views.commits.showBranchComparison": false,
   "gitlens.views.remotes.files.layout": "list",
+  "go.testFlags": [
+    "-v"
+  ],
+  "go.coverOnSave": true,
+  "go.coverageDecorator": {
+    "type": "gutter"
+  },
   "go.formatTool": "gofmt",
-  "go.lintFlags": ["--fast", "--config=${workspaceFolder}/.golangci.yml"],
+  "go.lintFlags": [
+    "--fast",
+    "--config=${fileWorkspaceFolder}/.golangci.yml"
+  ],
   "go.lintOnSave": "workspace",
   "go.lintTool": "golangci-lint",
   "go.playground": {
@@ -110,12 +166,13 @@
     "run": true,
     "share": false
   },
+  "go.toolsManagement.autoUpdate": true,
   "gopls": {
     "formatting.gofumpt": true
   },
   "hediet.vscode-drawio.resizeImages": null,
   "highlight.regexes": {
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIX|FIXME|MUST|MUST_NOT|REMOVE_ME|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+    "((?:<!-- *)?(?:#{1,6}|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIX|FIXME|MUST|MUST_NOT|REMOVE_ME|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "decorations": [
         {
           "backgroundColor": "#ff0000",
@@ -130,7 +187,7 @@
       ],
       "filterFileRegex": ".*(?<!(CHANGELOG.md|package.json))$"
     },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+    "((?:<!-- *)?(?:#{1,6}|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "decorations": [
         {
           "backgroundColor": "#cc00cc",
@@ -145,7 +202,7 @@
       ],
       "filterFileRegex": ".*(?<!CHANGELOG.md)$"
     },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+    "((?:<!-- *)?(?:#{1,6}|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "decorations": [
         {
           "backgroundColor": "#00ccff",
@@ -160,7 +217,7 @@
       ],
       "filterFileRegex": ".*(?<!CHANGELOG.md)$"
     },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+    "((?:<!-- *)?(?:#{1,6}|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:TODO|SHOULD|SHOULD_NOT|ASK_TO|QUESTION)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
       "decorations": [
         {
           "color": "#fff41a",
@@ -178,25 +235,35 @@
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown-mermaid.darkModeTheme": "base",
-  "markdown-preview-github-styles.colorTheme": "light",
+  "markdown-preview-github-styles.darkTheme": "light",
   "markdownlint.config": {
     "MD024": false,
     "MD036": false,
     "MD041": false
   },
+  "material-icon-theme.files.associations": {
+    ".envrc": "Pug",
+    ".envrc.local": "Pug"
+  },
+  "material-icon-theme.files.color": "#90a4ae",
   "prettier.jsxSingleQuote": true,
   "prettier.printWidth": 200,
   "prettier.singleQuote": true,
-  "remote.autoForwardPortsSource": "hybrid",
-  "remote.WSL.debug": true,
+  "remote.WSL.debug": false,
   "remote.WSL.useShellEnvironment": true,
+  "remote.autoForwardPortsSource": "hybrid",
   "security.workspace.trust.enabled": false,
   "security.workspace.trust.untrustedFiles": "newWindow",
+  "svg.preview.autoShow": true,
+  "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.sendKeybindingsToShell": false,
   "terminal.integrated.shellIntegration.enabled": true,
   "terminal.integrated.stickyScroll.maxLineCount": 5,
-  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*"],
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*"
+  ],
   "todo-tree.general.tags": [
     "TODO",
     "FIX",
@@ -209,21 +276,19 @@
     "REMOVE_ME"
   ],
   "todo-tree.highlights.enabled": false,
-  "trailing-spaces.syntaxIgnore": ["markdown"],
+  "trailing-spaces.syntaxIgnore": [
+    "markdown"
+  ],
   "typescript.preferences.quoteStyle": "single",
   "typescript.suggest.autoImports": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  // "vim.vimrc.enable": true,
-  // "vim.vimrc.path": "/etc/vi  // "vim.enableneovim": true,
-  // "vim.neovimpath": "/usr/local/bin/nvim,
-  // "vscode-neovim.neovimInitVimPaths.linux": "/home/ryo/.config/nvim/init.vim",
-  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",m/vimrc",
-  "vim.startInInsertMode": true,
   "vim.useSystemClipboard": true,
   "window.confirmSaveUntitledWorkspace": false,
   "window.newWindowProfile": "Default",
+  "window.zoomLevel": -1,
   "workbench.colorCustomizations": {
     "activityBar.activeBorder": "#63c3dd",
+    "editor.lineHighlightBackground": "#161926",
     "editorStickyScroll.background": "#0a1a2ec1",
     "panel.border": "#bbbbbb0d",
     "panelTitle.activeBorder": "#63c3dd",
@@ -235,5 +300,8 @@
   "workbench.colorTheme": "Material Theme Ocean",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.enableStickyScroll": true,
-  "yaml.format.enable": true
+  "yaml.format.enable": true,
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.activeIconPack": "react",
+  "workbench.sideBar.location": "right"
 }

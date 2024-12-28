@@ -57,7 +57,7 @@
   },
   {
     "command": "cursorUp",
-    "key": "ctrl+p",
+    "key": "ctrl+o",
     "when": "terminalFocus"
   },
   {
@@ -179,7 +179,8 @@
   },
   {
     "command": "workbench.action.toggleMaximizedPanel",
-    "key": "ctrl+k ctrl+m"
+    "key": "ctrl+k ctrl+m",
+    "when": "terminalFocus"
   },
   {
     "command": "-git.revertSelectedRanges",
@@ -233,13 +234,9 @@
     "key": "ctrl+k ctrl+oem_5"
   },
   {
-    "command": "workbench.action.splitEditorRight",
-    "key": "ctrl+k ctrl+l"
-  },
-  {
     "command": "markdown.showPreviewToSide",
-    "key": "ctrl+k ctrl+v",
-    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    "key": "ctrl+e ctrl+v",
+    "when": "!notebookEditorFocused && !terminalFocus && editorLangId == 'markdown' && !terminalFocus"
   },
   {
     "command": "-markdown.showPreviewToSide",
@@ -387,7 +384,7 @@
       ]
     },
     "command": "toggle",
-    "key": "ctrl+d ctrl+p",
+    "key": "ctrl+e ctrl+p",
     "when": "editorTextFocus && !terminalFocus"
   },
   {
@@ -587,10 +584,6 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "command": "workbench.action.splitEditorToRightGroup",
-    "key": "ctrl+k ctrl+l"
-  },
-  {
     "command": "selectPrevSuggestion",
     "key": "ctrl+p",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
@@ -638,18 +631,13 @@
   },
   {
     "command": "workbench.action.gotoSymbol",
-    "key": "ctrl+d ctrl+o",
+    "key": "ctrl+e ctrl+o",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown && !terminalFocus"
   },
   {
     "command": "-workbench.action.gotoSymbol",
     "key": "ctrl+shift+o",
     "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
-  },
-  {
-    "command": "extension.vim_ctrl+c",
-    "key": "ctrl+c",
-    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
   },
   {
     "command": "-extension.vim_ctrl+c",
@@ -662,7 +650,7 @@
   },
   {
     "command": "toggleFindWholeWord",
-    "key": "alt+d",
+    "key": "alt+c",
     "when": "editorFocus"
   },
   {
@@ -756,8 +744,8 @@
   },
   {
     "command": "workbench.action.switchWindow",
-    "key": "ctrl+d ctrl+s",
-    "when": " !terminalFocus"
+    "key": "ctrl+e ctrl+w",
+    "when": "!terminalFocus"
   },
   {
     "command": "workbench.action.terminal.new",
@@ -781,7 +769,7 @@
   },
   {
     "command": "editor.action.addSelectionToNextFindMatch",
-    "key": "ctrl+d ctrl+d",
+    "key": "ctrl+e ctrl+d",
     "when": "editorFocus && !terminalFocus"
   },
   {
@@ -791,12 +779,348 @@
   },
   {
     "command": "references-view.findReferences",
-    "key": "ctrl+d ctrl+r",
-    "when": "editorHasReferenceProvider"
+    "key": "ctrl+e ctrl+r",
+    "when": "editorHasReferenceProvider && !terminalFocus"
   },
   {
     "command": "-references-view.findReferences",
     "key": "shift+alt+f12",
     "when": "editorHasReferenceProvider"
+  },
+  {
+    "key": "backspace",
+    "command": "-extension.vim_backspace",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+e ctrl+l",
+    "command": "workbench.action.quickOpenLeastRecentlyUsedEditor",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "list.focusPageDown",
+    "when": "listFocus && !inputFocus && !terminalFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-list.focusPageDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "-workbench.action.files.save"
+  },
+  {
+    "key": "ctrl+shift+1",
+    "command": "workbench.action.firstEditorInGroup"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "ctrl+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "ctrl+8",
+    "command": "workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "alt+left",
+    "command": "-workbench.action.navigateBack",
+    "when": "canNavigateBack"
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "workbench.action.moveEditorToRightGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+h",
+    "command": "workbench.action.moveEditorToLeftGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "workbench.action.moveEditorToBelowGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+k",
+    "command": "workbench.action.moveEditorToAboveGroup"
+  },
+  {
+    "key": "ctrl+k ctrl+e",
+    "command": "markdown.extension.editing.toggleStrikethrough",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/ |!terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+l",
+    "command": "workbench.action.positionPanelRight",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+j",
+    "command": "workbench.action.positionPanelBottom",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+k ctrl+u",
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "ctrl+k ctrl+j",
+    "command": "-editor.unfoldAll",
+    "when": "editorTextFocus && foldingEnabled"
+  },
+  {
+    "key": "tab",
+    "command": "extension.vim_tab",
+    "when": "!terminalFocus && editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpen",
+    "when": " !terminalFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+e ctrl+q",
+    "command": "sqltools.bookmarkSelection",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+q",
+    "command": "-sqltools.bookmarkSelection",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+r",
+    "command": "sqltools.deleteBookmark",
+    "when": "!config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+r",
+    "command": "-sqltools.deleteBookmark",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+a",
+    "command": "sqltools.runFromBookmarks",
+    "when": "!config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+a",
+    "command": "-sqltools.runFromBookmarks",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+d",
+    "command": "sqltools.describeTable",
+    "when": "!config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+d",
+    "command": "-sqltools.describeTable",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+e",
+    "command": "sqltools.executeQuery",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+e",
+    "command": "-sqltools.executeQuery",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+s",
+    "command": "sqltools.showRecords",
+    "when": "!config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+s",
+    "command": "-sqltools.showRecords",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+h",
+    "command": "sqltools.runFromHistory",
+    "when": "!config.sqltools.disableChordKeybindings && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+h",
+    "command": "-sqltools.runFromHistory",
+    "when": "!config.sqltools.disableChordKeybindings"
+  },
+  {
+    "key": "ctrl+e ctrl+b",
+    "command": "sqltools.formatSql",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings && !editorReadonly && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+b",
+    "command": "-sqltools.formatSql",
+    "when": "editorHasSelection && editorTextFocus && !config.sqltools.disableChordKeybindings && !editorReadonly"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-extension.vim_ctrl+e",
+    "when": "editorTextFocus && vim.active && vim.use<C-e> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-editor.action.toggleScreenReaderAccessibilityMode",
+    "when": "accessibilityHelpIsShown"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+    "when": "inFilesPicker && inQuickOpen"
+  },
+  {
+    "key": "ctrl+e ctrl+r",
+    "command": "markdown.extension.editing.toggleStrikethrough",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown' && !terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+v",
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && !terminalFocus && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+oem_6",
+    "command": "-markdown.extension.editing.toggleHeadingUp",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "ctrl+e ctrl+h",
+    "command": "workbench.action.positionPanelLeft",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+e ctrl+k",
+    "command": "workbench.action.positionPanelTop",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.terminal.sendSequence",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+d",
+    "command": "toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "-toggleFindCaseSensitive",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+oem_3",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+e ctrl+f",
+    "command": "workbench.action.terminal.focusFind",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFolderViaWorkspace",
+    "when": "!openFolderWorkspaceSupport && workbenchState == 'workspace'"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFileFolder",
+    "when": "isMacNative && openFolderWorkspaceSupport"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.files.openLocalFile",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openLocalFile",
+    "when": "remoteFileDialogVisible"
   }
 ]
