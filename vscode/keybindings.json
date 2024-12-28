@@ -462,7 +462,7 @@
   },
   {
     "command": "workbench.action.terminal.focusFind",
-    "key": "ctrl+f",
+    "key": "ctrl+k ctrl+f",
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
   },
   {
@@ -792,16 +792,11 @@
   {
     "command": "references-view.findReferences",
     "key": "ctrl+d ctrl+r",
-    "when": "editorHasReferenceProvider && !terminalFocus"
+    "when": "editorHasReferenceProvider"
   },
   {
     "command": "-references-view.findReferences",
     "key": "shift+alt+f12",
     "when": "editorHasReferenceProvider"
-  },
-  {
-    "key": "backspace",
-    "command": "-extension.vim_backspace",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
   }
 ]
