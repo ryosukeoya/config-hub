@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 filename="$(date "+%F")"
+
 # c: Current Directory
 if [ "$1" = 'c' ]; then
   filename+="-$(basename "${PWD}")"
@@ -12,3 +14,5 @@ ex='md'
 [ -n "$2" ] && ex="$2"
 
 touch "${filename}.${ex}"
+
+exit 0

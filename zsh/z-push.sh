@@ -1,8 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp ~/.zshrc "${PWD}"
-
-git add .zshrc
+git add -f .zshrc
 git commit -m 'upsert .zshrc'
 git push origin HEAD
 
