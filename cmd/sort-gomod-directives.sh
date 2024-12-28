@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-find /home/ryo/ghq/github.com/plusmedi/mhv2-backends -name "go.mod" -type f -exec grep -nH --null -e ^go \{\} + | sort -t ' ' -k 2 -V -r
+find_dir=$1
 
-# find /home/ryo/ghq/github.com/plusmedi/mhv2-backends -name "go.mod" -type f -exec grep -nH --null -e ^go \{\} + | sort -t ' ' -k 2 -V -r | awk '{
-#     version=$2
-#     printf "%s %s\033[34m%s\033[0m\n", $1, "go", version
-# }'
+find "${find_dir}" -name "go.mod" -type f -exec grep -nH --null -e ^go \{\} + | sort -t ' ' -k 2 -V -r
 
 exit 0
